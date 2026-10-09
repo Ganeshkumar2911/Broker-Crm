@@ -127,7 +127,7 @@ export const useTickerStore = defineStore("tickers", () => {
 
     ticker.on("live_user_count_update", (data) => {
       if (data) {
-        dashboardStore.updateUserAccountsFromSocket(data);
+        // dashboardStore.updateUserAccountsFromSocket(data);
       }
     });
 

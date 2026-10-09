@@ -15,7 +15,6 @@ initTheme()
 const app = createApp(App)
 
 app.use(createPinia())
-app.use(router)
 app.component('HugeiconsIcon', HugeiconsIcon)
 app.component('HugeIcon', HugeiconsIcon)
 app.component('BaseSelect', BaseSelect)
@@ -58,5 +57,8 @@ async function enableMocking() {
 }
 
 enableMocking().then(() => {
+  // IMPORTANT: We must initialize the router AFTER MSW is ready!
+  // Otherwise, the router's initial navigation will trigger API calls before the mock service worker has intercepted them.
+  app.use(router)
   app.mount('#app')
 })

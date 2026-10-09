@@ -4,11 +4,7 @@ import router from "../router";
 
 // ─── Constants
 
-const DEFAULT_BASE_URL =
-  typeof window !== "undefined" &&
-  window.location.hostname === "admin.panthercapitals.com"
-    ? "https://admin.panthercapitals.com/admin/"
-    : "https://admin.panthercapitals.com/admin/";
+const DEFAULT_BASE_URL = import.meta.env.VITE_API_URL || "/api/";
 
 const BASE_URL = DEFAULT_BASE_URL;
 

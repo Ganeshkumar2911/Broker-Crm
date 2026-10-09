@@ -1,3 +1,5 @@
+import { computed } from 'vue'
+import { storeToRefs } from 'pinia'
 import { useMyPermissionsStore } from '@/stores/rbac/myPermissions'
 
 /**
@@ -5,16 +7,28 @@ import { useMyPermissionsStore } from '@/stores/rbac/myPermissions'
  */
 export function usePermissionCheck() {
   const store = useMyPermissionsStore()
+  
+  // Extract reactive state/computed properties properly
+  const { 
+    hasNoPermissions, 
+    userCodes, 
+    permissions, 
+    loading, 
+    isFetched 
+  } = storeToRefs(store)
 
   return {
+    // Actions / Functions (these don't lose reactivity)
     hasPermission: store.hasPermission,
     hasAnyPermission: store.hasAnyPermission,
     hasAllPermissions: store.hasAllPermissions,
     hasModulePermission: store.hasModulePermission,
-    hasNoPermissions: store.hasNoPermissions,
-    userCodes: store.userCodes,
-    permissions: store.permissions,
-    loading: store.loading,
-    isFetched: store.isFetched,
+    
+    // Reactive State / Computed properties
+    hasNoPermissions,
+    userCodes,
+    permissions,
+    loading,
+    isFetched,
   }
 }
