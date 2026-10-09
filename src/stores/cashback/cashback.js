@@ -133,6 +133,7 @@ export const useCashbackStore = defineStore("cashback", () => {
     error.value = null;
 
     const successHandler = (res) => {
+      console.log('fetchEnrollments res:', res);
       enrollments.value = Array.isArray(res?.data?.items) ? res.data.items : [];
       if (res?.data) {
         enrollmentsPagination.value = {

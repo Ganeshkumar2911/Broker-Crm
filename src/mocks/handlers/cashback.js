@@ -40,8 +40,12 @@ export const cashbackHandlers = [
 
     return HttpResponse.json({
       status: 'success',
-      data: paginate(allEntries, page, perPage),
-      pagination: { page, per_page: perPage, total_items: totalItems, total_pages: totalPages }
+      data: {
+        items: paginate(allEntries, page, perPage),
+        total: totalItems,
+        limit: perPage,
+        offset: (page - 1) * perPage
+      }
     })
   }),
 
@@ -93,8 +97,12 @@ export const cashbackHandlers = [
 
     return HttpResponse.json({
       status: 'success',
-      data: paginate(allEntries, page, perPage),
-      pagination: { page, per_page: perPage, total_items: totalItems, total_pages: totalPages }
+      data: {
+        items: paginate(allEntries, page, perPage),
+        total: totalItems,
+        limit: perPage,
+        offset: (page - 1) * perPage
+      }
     })
   }),
 
@@ -124,8 +132,12 @@ export const cashbackHandlers = [
 
     return HttpResponse.json({
       status: 'success',
-      data: paginate(allEntries, page, perPage),
-      pagination: { page, per_page: perPage, total_items: totalItems, total_pages: totalPages }
+      data: {
+        items: paginate(allEntries, page, perPage),
+        total: totalItems,
+        limit: perPage,
+        offset: (page - 1) * perPage
+      }
     })
   })
 ]

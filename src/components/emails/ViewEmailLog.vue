@@ -31,7 +31,7 @@
       >
         <!-- Loading State -->
         <div
-          v-if="store.isLoadingLogs"
+          v-if="store.isLoadingEmailViewLogsDetails"
           class="h-full flex items-center justify-center bg-background border border-primary-border rounded-xl px-4 py-3"
         >
           <div class="flex flex-col items-center gap-2">
@@ -42,7 +42,7 @@
 
         <div v-else class="space-y-4 h-full">
           <div
-            v-if="store.logDetails"
+            v-if="store.viewLogsDetaisl"
             class="grid grid-cols-2 gap-4 h-full min-h-0"
           >
             <div
@@ -57,7 +57,7 @@
                       Sent On
                     </p>
                     <p class="text-primary-text text-sm">
-                      {{ formatDate(store.logDetails?.date) }}
+                      {{ formatDate(store.viewLogsDetaisl?.date) }}
                     </p>
                   </div>
                   <div>
@@ -65,7 +65,7 @@
                       Sender (from)
                     </p>
                     <p class="text-primary-text text-sm">
-                      {{ store.logDetails?.from }}
+                      {{ store.viewLogsDetaisl?.from }}
                     </p>
                   </div>
                   <div>
@@ -73,7 +73,7 @@
                       Recipient (to)
                     </p>
                     <p class="text-primary-text text-sm">
-                      {{ store.logDetails?.email }}
+                      {{ store.viewLogsDetaisl?.email }}
                     </p>
                   </div>
                   <div>
@@ -81,14 +81,14 @@
                       Message ID
                     </p>
                     <p class="text-primary-text text-sm">
-                      {{ store.logDetails?.messageId }}
+                      {{ store.viewLogsDetaisl?.messageId }}
                     </p>
                   </div>
                 </div>
               </div>
 
               <div class="flex-1 min-h-0">
-                <RenderHTMLBody :htmlContent="store.logDetails?.body || ''" />
+                <RenderHTMLBody :htmlContent="store.viewLogsDetaisl?.body || ''" />
               </div>
             </div>
 
@@ -313,7 +313,7 @@ const closeDialog = () => {
 };
 
 const formattedEvents = computed(() => {
-  return (store.logDetails?.events || []).map((item) => {
+  return (store.viewLogsDetaisl?.events || []).map((item) => {
     const config = eventConfig[item.name] || {
       label: item.name
         .replace(/_/g, " ")
@@ -336,7 +336,7 @@ watch(
   async ([newOpen, newId]) => {
     if (newOpen && newId) {
       console.log("Fetching details for ID:", newId);
-      await store.fetchLogsDetails(newId);
+      await store.fetchViewLogsDetails(newId);
     }
   },
   { immediate: true },

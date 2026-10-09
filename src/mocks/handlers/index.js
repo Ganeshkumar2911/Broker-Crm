@@ -19,6 +19,9 @@ import { ibCommissionHandlers } from './ibCommission'
 import { clientDepthHandlers } from './clientDepth'
 import { paymentRequestsHandlers } from './paymentRequests'
 import { cashbackHandlers } from './cashback'
+import { ticketsHandlers } from './tickets'
+import { notificationsHandlers } from './notifications'
+import { tagsHandlers } from './tags'
 import { catchAllHandlers } from './catchAll'
 
 export const handlers = [
@@ -43,5 +46,8 @@ export const handlers = [
   ...misc2Handlers,
   ...ibCommissionHandlers,
   ...clientDepthHandlers,
+  ...ticketsHandlers,
+  ...notificationsHandlers,
+  ...tagsHandlers,
   ...catchAllHandlers
 ]
