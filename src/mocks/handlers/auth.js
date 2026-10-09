@@ -7,10 +7,22 @@ import { mockPermissions } from '../data/permissionsData'
 export const authHandlers = [
   // 1. Mock Login API
   http.post('/api' + urls.auth.login, async ({ request }) => {
-    // You could read the email/password here if you wanted to validate it:
-    // const { email, password } = await request.json()
+    const body = await request.json()
+    const { email, password } = body
 
-    // But for a dummy demo, we can just accept any login and return a fake token
+    if (email !== 'admin@tech4broker.com' || password !== 'Broker@123') {
+      return new HttpResponse(
+        JSON.stringify({
+          success: false,
+          message: "Invalid email or password."
+        }),
+        {
+          status: 401,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      )
+    }
+
     return HttpResponse.json({
       success: true,
       data: {
@@ -19,7 +31,7 @@ export const authHandlers = [
         user: {
           id: faker.string.uuid(),
           name: faker.person.fullName(),
-          email: 'admin@panthercapital.com',
+          email: 'admin@tech4broker.com',
           role: 'superadmin',
           avatar: faker.image.avatar()
         }
