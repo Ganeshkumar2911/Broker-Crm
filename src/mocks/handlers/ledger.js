@@ -26,9 +26,10 @@ export const ledgerHandlers = [
       client_name: faker.person.fullName(),
       method: faker.helpers.arrayElement(['crypto', 'wire', 'card', 'internal']),
       gateway: faker.helpers.arrayElement(['binance', 'stripe', 'manual', null]),
-      type: faker.helpers.arrayElement(['deposit', 'withdrawal', 'transfer']),
+      type: faker.helpers.arrayElement(['deposit', 'withdrawal', 'trade_pnl', 'fee_paid']),
       amount: faker.number.float({ min: 10, max: 5000, fractionDigits: 2 }),
       broker_currency: 'USD',
+      approval_status: faker.helpers.arrayElement(['approved', 'completed', 'paid', 'success', 'pending', 'processing', 'rejected', 'failed']),
       created_at: faker.date.recent().toISOString()
     }))
 
@@ -41,6 +42,11 @@ export const ledgerHandlers = [
         total_withdrawal: 45000.25,
         total_pnl: 15200.75,
         total_fee_paid: 1250.00
+      },
+      filters: {
+        clients: Array.from({ length: 5 }).map((_, i) => ({ id: i + 1, name: faker.person.fullName() })),
+        accounts: Array.from({ length: 5 }).map((_, i) => ({ id: i + 1, account_id: i + 1, account_number: faker.number.int({ min: 100000, max: 999999 }), broker_label: 'Live' })),
+        types: ['deposit', 'withdrawal', 'trade_pnl', 'fee_paid']
       }
     })
   }),
@@ -54,11 +60,16 @@ export const ledgerHandlers = [
     const totalPages = Math.ceil(totalItems / perPage)
 
     const allTransfers = Array.from({ length: totalItems }).map((_, i) => ({
-      transfer_id: faker.number.int({ min: 10000, max: 99999 }),
+      ledger_id: faker.number.int({ min: 10000, max: 99999 }),
+      description: faker.lorem.sentence(),
       client_name: faker.person.fullName(),
-      from_account: faker.number.int({ min: 100000, max: 999999 }),
-      to_account: faker.number.int({ min: 100000, max: 999999 }),
+      client_id: faker.number.int({ min: 1000, max: 9999 }),
+      account_number: faker.number.int({ min: 100000, max: 999999 }),
+      broker_label: faker.helpers.arrayElement(['Live', 'Demo']),
+      account_type: faker.helpers.arrayElement(['Standard', 'Pro']),
+      type: faker.helpers.arrayElement(['deposit', 'withdrawal']),
       amount: faker.number.float({ min: 10, max: 2000, fractionDigits: 2 }),
+      broker_currency: 'USD',
       status: faker.helpers.arrayElement(['completed', 'pending', 'rejected']),
       created_at: faker.date.recent().toISOString()
     }))
@@ -66,7 +77,12 @@ export const ledgerHandlers = [
     return HttpResponse.json({
       status: 'success',
       data: paginate(allTransfers, page, perPage),
-      pagination: { page, per_page: perPage, total_items: totalItems, total_pages: totalPages }
+      pagination: { page, per_page: perPage, total_items: totalItems, total_pages: totalPages },
+      filters: {
+        clients: Array.from({ length: 5 }).map((_, i) => ({ id: i + 1, name: faker.person.fullName() })),
+        accounts: Array.from({ length: 5 }).map((_, i) => ({ id: i + 1, account_id: i + 1, account_number: faker.number.int({ min: 100000, max: 999999 }), broker_label: 'Live' })),
+        types: ['deposit', 'withdrawal']
+      }
     })
   }),
 
@@ -199,6 +215,38 @@ export const ledgerHandlers = [
         total_broker_fee: 15000.25,
         total_platform_earning: 215000.00
       }
+    })
+  }),
+
+  // 6. SEARCH CLIENTS
+  http.get('/api' + urls.clientLedger.allClients, ({ request }) => {
+    const totalItems = 25
+    const allClients = Array.from({ length: totalItems }).map((_, i) => ({
+      id: i + 1,
+      name: faker.person.fullName(),
+      email: faker.internet.email()
+    }))
+
+    return HttpResponse.json({
+      status: 'success',
+      data: allClients
+    })
+  }),
+
+  // 7. SEARCH ACCOUNTS
+  http.get('/api' + urls.clientLedger.allAccounts, ({ request }) => {
+    const totalItems = 30
+    const allAccounts = Array.from({ length: totalItems }).map((_, i) => ({
+      id: i + 1,
+      account_id: i + 1,
+      account_number: faker.number.int({ min: 100000, max: 999999 }),
+      broker_label: faker.helpers.arrayElement(['Live', 'Demo', 'Pro']),
+      client_name: faker.person.fullName()
+    }))
+
+    return HttpResponse.json({
+      status: 'success',
+      data: allAccounts
     })
   })
 ]

@@ -14,12 +14,13 @@ export const authHandlers = [
     return HttpResponse.json({
       success: true,
       data: {
-        accessToken: 'dummy-jwt-token-ey123456789',
+        access_token: 'dummy-jwt-token-ey123456789',
+        role: 'superadmin',
         user: {
           id: faker.string.uuid(),
           name: faker.person.fullName(),
           email: 'admin@panthercapital.com',
-          role: 'Super Admin',
+          role: 'superadmin',
           avatar: faker.image.avatar()
         }
       },

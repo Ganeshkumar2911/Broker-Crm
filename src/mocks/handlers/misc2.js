@@ -168,6 +168,33 @@ export const misc2Handlers = [
   // ---------------------------------------------------------
   // LOYALTY PROGRAM
   // ---------------------------------------------------------
+  http.get('/api' + urls.loyalty.deals, ({ request }) => {
+    const url = new URL(request.url)
+    const page = parseInt(url.searchParams.get('page')) || 1
+    const perPage = parseInt(url.searchParams.get('per_page')) || 10
+    
+    const totalItems = 40
+    const allDeals = Array.from({ length: totalItems }).map((_, i) => ({
+      id: faker.string.uuid(),
+      mt5_deal_id: faker.number.int({ min: 1000000, max: 9999999 }),
+      account_number: faker.number.int({ min: 1000, max: 9999 }),
+      position_id: faker.number.int({ min: 100000, max: 999999 }),
+      symbol: faker.helpers.arrayElement(['EURUSD', 'GBPUSD', 'XAUUSD', 'BTCUSD']),
+      side: faker.helpers.arrayElement(['BUY', 'SELL']),
+      lots: faker.finance.amount({ min: 0.01, max: 10, dec: 2 }),
+      duration_seconds: faker.number.int({ min: 10, max: 3600 }),
+      points_awarded: faker.finance.amount({ min: 0.1, max: 50, dec: 2 }),
+      eligibility_status: faker.helpers.arrayElement(['awarded', 'not_awarded', 'pending']),
+      close_time: faker.date.recent().toISOString()
+    }))
+
+    return HttpResponse.json({
+      status: 'success',
+      data: paginate(allDeals, page, perPage),
+      pagination: { page, per_page: perPage, total_items: totalItems, total_pages: Math.ceil(totalItems/perPage) }
+    })
+  }),
+
   // Note: catching all /loyalty/* as a fallback just in case
   http.get('/api/loyalty/*', ({ request }) => {
     const url = new URL(request.url)
