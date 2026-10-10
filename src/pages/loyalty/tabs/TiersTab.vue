@@ -83,51 +83,21 @@
 
           <!-- Brand Logo Watermark Background with shine effect strictly inside logo vector paths -->
           <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden select-none">
-            <svg
-              viewBox="0 0 561.49 388.8"
-              class="w-32 sm:w-36 h-auto"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <mask :id="`tier-logo-mask-${tier.id || tier.code}`">
-                  <g fill="#ffffff">
-                    <path d="M276.33,178.03l.12-28.66c.11-27.43-17.74-51.69-43.95-59.76L96.14,47.68h-.02s-62.81-19.32-62.81-19.32l.04.08L0,18.22s38.12,20.1,52.99,52.6c5.63,12.14,16.05,21.39,28.78,25.53,89.8,29.18,167.67,51.25,194.56,81.68Z"/>
-                    <path d="M250.78,169.67c-11.81-9.48-14.62-10.26-33.74-17.42,6.3,8.29,10.73,22.25,12.32,50.48l-67.09-21.36-14.66-38.05c-3.26-8.46-10.28-14.91-18.99-17.44l-56.95-16.53,77.75,164.12c6.15,15.02,35.98,40.23,75.09,69.43l-38.93-101.04,91.74,28.66v-51.96c0-19.73-4.48-31.17-26.53-48.88Z"/>
-                    <path d="M342.11,285.66l9.67-133.41c-5.99,2.95-17.08,9.2-34.85,19.78-22.45,16.52-25.12,23.34-25.12,40.53v176.24l90.35-71.64c20.35-16.14,36.43-37.01,46.84-60.81l13.05-29.83c-23.1,6.44-44.97,12.76-59.36,18.3-6.41,15.34-15.76,28.47-40.58,40.83Z"/>
-                    <path d="M496.26,42.04l-152.92,46.76c-30.74,9.4-51.6,37.95-51.22,70.1l.24,20.19c24.13-25.38,71.02-47.8,150.99-65.91l-25.39,57,53.54-16.33c3.26-.99,5.96-3.31,7.43-6.39l31.15-65.29c22.5-47.16,51.42-60.54,51.42-60.54l-65.24,20.42Z"/>
-                    <path d="M122.54,25.42s123.47,46.95,150.82,56.02c4.49,1.49,9.33,1.54,13.86.16l144.9-54.68C341.87-7.27,217.78-10.11,122.54,25.42Z"/>
-                  </g>
-                </mask>
-                <linearGradient :id="`shine-gradient-${tier.id || tier.code}`" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-                  <stop offset="35%" stop-color="#ffffff" stop-opacity="0.08" />
-                  <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6" />
-                  <stop offset="65%" stop-color="#ffffff" stop-opacity="0.08" />
-                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-
-              <!-- Base subtle watermark -->
-              <g fill="#ffffff" opacity="0.08">
-                <path d="M276.33,178.03l.12-28.66c.11-27.43-17.74-51.69-43.95-59.76L96.14,47.68h-.02s-62.81-19.32-62.81-19.32l.04.08L0,18.22s38.12,20.1,52.99,52.6c5.63,12.14,16.05,21.39,28.78,25.53,89.8,29.18,167.67,51.25,194.56,81.68Z"/>
-                <path d="M250.78,169.67c-11.81-9.48-14.62-10.26-33.74-17.42,6.3,8.29,10.73,22.25,12.32,50.48l-67.09-21.36-14.66-38.05c-3.26-8.46-10.28-14.91-18.99-17.44l-56.95-16.53,77.75,164.12c6.15,15.02,35.98,40.23,75.09,69.43l-38.93-101.04,91.74,28.66v-51.96c0-19.73-4.48-31.17-26.53-48.88Z"/>
-                <path d="M342.11,285.66l9.67-133.41c-5.99,2.95-17.08,9.2-34.85,19.78-22.45,16.52-25.12,23.34-25.12,40.53v176.24l90.35-71.64c20.35-16.14,36.43-37.01,46.84-60.81l13.05-29.83c-23.1,6.44-44.97,12.76-59.36,18.3-6.41,15.34-15.76,28.47-40.58,40.83Z"/>
-                <path d="M496.26,42.04l-152.92,46.76c-30.74,9.4-51.6,37.95-51.22,70.1l.24,20.19c24.13-25.38,71.02-47.8,150.99-65.91l-25.39,57,53.54-16.33c3.26-.99,5.96-3.31,7.43-6.39l31.15-65.29c22.5-47.16,51.42-60.54,51.42-60.54l-65.24,20.42Z"/>
-                <path d="M122.54,25.42s123.47,46.95,150.82,56.02c4.49,1.49,9.33,1.54,13.86.16l144.9-54.68C341.87-7.27,217.78-10.11,122.54,25.42Z"/>
-              </g>
-
-              <!-- Shine effect strictly masked to the logo paths -->
-              <g :mask="`url(#tier-logo-mask-${tier.id || tier.code})`">
-                <rect
-                  x="-350"
-                  y="-200"
-                  width="350"
-                  height="800"
-                  :fill="`url(#shine-gradient-${tier.id || tier.code})`"
-                  class="svg-shine-rect"
-                />
-              </g>
-            </svg>
+            <div class="relative w-32 sm:w-36 h-32 sm:h-36">
+              <img
+                src="/gold_logo.png"
+                alt="Tier Logo"
+                class="absolute inset-0 w-full h-full opacity-10 object-contain grayscale-[20%]"
+              />
+              <div
+                class="absolute inset-0 pointer-events-none"
+                style="-webkit-mask-image: url(/gold_logo.png); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"
+              >
+                <div class="w-[350px] h-[800px] absolute top-1/2 left-1/2 -mt-[400px] -ml-[175px] svg-shine-rect"
+                     style="background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 35%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.08) 65%, rgba(255,255,255,0) 100%);">
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="relative z-10 p-4 flex flex-col h-full justify-between gap-3">
@@ -331,7 +301,7 @@ import { ref, computed, watch, onMounted } from "vue";
 import { Award, Plus, RefreshCw, Layers, Pencil } from "lucide-vue-next";
 import { useLoyaltyStore } from "@/stores/loyalty/loyalty";
 import { usePermissionCheck } from "@/composables/usePermissionCheck";
-import logoIcon from "@/assets/logo.svg";
+import logoIcon from "@/assets/panther-fav.svg";
 import TierDrawer from "../components/TierDrawer.vue";
 
 const store = useLoyaltyStore();

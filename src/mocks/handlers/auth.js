@@ -59,13 +59,29 @@ export const authHandlers = [
       data: {
         id: 'user-123',
         name: 'Admin User',
-        email: 'admin@t4bcapital.com',
-        role: 'Super Admin'
+        email: 'admin@tech4broker.com',
+        role: 'Super Admin',
+        phone_number: faker.phone.number(),
+        date_of_birth: faker.date.birthdate({ min: 30, max: 60, mode: 'age' }).toISOString().split('T')[0],
+        country: 'US',
+        state: faker.location.state(),
+        city: faker.location.city(),
+        address: faker.location.streetAddress(),
+        zip_code: faker.location.zipCode(),
+        created_at: faker.date.past({ years: 2 }).toISOString().split('T')[0]
       }
     })
   }),
 
-  // 4. Mock RBAC Permissions to bypass "Access Restricted" screen
+  // 4. Mock Update Profile
+  http.put('/api' + (urls?.auth?.updateProfile || '/user/update_profile') + '/:id', async ({ request }) => {
+    return HttpResponse.json({
+      success: true,
+      message: 'Profile updated successfully'
+    })
+  }),
+
+  // 5. Mock RBAC Permissions to bypass "Access Restricted" screen
   http.get('/api' + urls.rbac.userPermissions.me, () => {
     return HttpResponse.json(mockPermissions)
   })
