@@ -267,7 +267,7 @@
             <button
               type="button"
               :disabled="!canEdit || !isValid || clientDepthStore.isSubmittingProfile"
-              class="flex-1 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-all flex items-center justify-center gap-2 shadow-md disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+              class="flex-1 px-4 py-2.5 rounded-xl text-xs font-bold text-btn-text-primary bg-primary hover:bg-primary-hover transition-all flex items-center justify-center gap-2 shadow-md disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               @click="handleSubmit"
             >
               <Loader2

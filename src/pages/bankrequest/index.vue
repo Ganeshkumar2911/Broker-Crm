@@ -16,7 +16,7 @@
           class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap"
           :class="
             store.filters.approval_status === tab.value
-              ? 'bg-primary text-white font-bold'
+              ? 'bg-primary text-btn-text-primary font-bold'
               : 'text-secondary-text hover:bg-card-background hover:text-primary-text'
           "
         >

@@ -100,7 +100,7 @@
               <button
                 @click="submitFmRegistration"
                 :disabled="fmFormLoading"
-                class="flex-1 px-4 py-2.5 rounded-xl text-xs font-semibold bg-primary text-white hover:bg-primary-hover disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                class="flex-1 px-4 py-2.5 rounded-xl text-xs font-semibold bg-primary text-btn-text-primary hover:bg-primary-hover disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
               >
                 <Loader2 v-if="fmFormLoading" class="w-3.5 h-3.5 animate-spin" />
                 <span>{{ fmFormLoading ? 'Submitting...' : 'Submit Request' }}</span>
@@ -229,7 +229,7 @@
               <button
                 @click="submitProfileUpdate"
                 :disabled="profileStore.updateLoading"
-                class="flex-1 px-4 py-2.5 rounded-xl text-xs font-semibold bg-primary text-white hover:bg-primary-hover disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                class="flex-1 px-4 py-2.5 rounded-xl text-xs font-semibold bg-primary text-btn-text-primary hover:bg-primary-hover disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
               >
                 <Loader2 v-if="profileStore.updateLoading" class="w-3.5 h-3.5 animate-spin" />
                 <span>{{ profileStore.updateLoading ? 'Saving...' : 'Save Profile' }}</span>
@@ -396,7 +396,7 @@
                     </p>
                     <button
                       @click="openFmForm"
-                      class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer"
+                      class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer"
                     >
                       <ClipboardList class="w-3.5 h-3.5" />
                       Complete FM Registration

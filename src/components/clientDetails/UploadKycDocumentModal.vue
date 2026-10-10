@@ -82,7 +82,7 @@
                     class="py-2 px-3 rounded-lg font-semibold transition cursor-pointer flex items-center justify-center gap-2 text-center"
                     :class="
                       uploadCategory === 'document'
-                        ? 'bg-primary text-white shadow-2xs'
+                        ? 'bg-primary text-btn-text-primary shadow-2xs'
                         : 'text-secondary-text hover:text-primary-text hover:bg-card-background/60'
                     "
                   >
@@ -96,7 +96,7 @@
                     class="py-2 px-3 rounded-lg font-semibold transition cursor-pointer flex items-center justify-center gap-2 text-center"
                     :class="
                       uploadCategory === 'image'
-                        ? 'bg-primary text-white shadow-2xs'
+                        ? 'bg-primary text-btn-text-primary shadow-2xs'
                         : 'text-secondary-text hover:text-primary-text hover:bg-card-background/60'
                     "
                   >
@@ -133,7 +133,7 @@
                       class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 border"
                       :class="
                         imageUploadMode === 'single'
-                          ? 'bg-primary text-white border-primary'
+                          ? 'bg-primary text-btn-text-primary border-primary'
                           : 'bg-background border-primary-border text-secondary-text'
                       "
                     >
@@ -159,7 +159,7 @@
                       class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 border"
                       :class="
                         imageUploadMode === 'dual'
-                          ? 'bg-primary text-white border-primary'
+                          ? 'bg-primary text-btn-text-primary border-primary'
                           : 'bg-background border-primary-border text-secondary-text'
                       "
                     >
@@ -674,7 +674,7 @@
               <button
                 type="submit"
                 :disabled="isSubmitDisabled"
-                class="px-5 py-2.5 text-xs font-bold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                class="px-5 py-2.5 text-xs font-bold text-btn-text-primary bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Loader2
                   v-if="clientDepthStore.isSubmittingReference"

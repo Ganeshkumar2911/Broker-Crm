@@ -574,7 +574,7 @@ onBeforeUnmount(() => clearTimeout(searchTimer));
             class="px-4 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer"
             :class="
               activeTab === tab.value
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'text-secondary-text hover:text-primary-text'
             "
             @click="switchTab(tab.value)"
@@ -594,7 +594,7 @@ onBeforeUnmount(() => clearTimeout(searchTimer));
             class="px-4 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer"
             :class="
               activeTradingType === filter.value
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'text-secondary-text hover:text-primary-text'
             "
             @click="setTradingType(filter.value)"
@@ -614,7 +614,7 @@ onBeforeUnmount(() => clearTimeout(searchTimer));
             class="px-4 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer"
             :class="
               activeAccountType === filter.value
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'text-secondary-text hover:text-primary-text'
             "
             @click="setAccountType(filter.value)"

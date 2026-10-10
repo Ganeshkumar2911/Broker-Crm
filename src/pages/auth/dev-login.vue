@@ -351,7 +351,7 @@ const handleLogin = () => {
             type="button"
             @click="handleLogin"
             :disabled="loading"
-            class="w-full rounded-lg bg-primary py-3 text.sm font-medium text-white hover:bg-primary-hover transition disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
+            class="w-full rounded-lg bg-primary py-3 text.sm font-medium text-btn-text-primary hover:bg-primary-hover transition disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Loader2 v-if="loading" class="w-4 h-4 animate-spin" />
             <span>{{

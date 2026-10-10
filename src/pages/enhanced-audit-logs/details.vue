@@ -419,7 +419,7 @@
               
               <!-- Step 1: Actor Initiation -->
               <div class="relative">
-                <div class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white text-[9px] shadow-sm">
+                <div class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-btn-text-primary text-[9px] shadow-sm">
                   <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
                 </div>
                 <div class="flex items-baseline justify-between">
@@ -438,7 +438,7 @@
 
               <!-- Step 2: Ingress & Endpoint Execution -->
               <div class="relative">
-                <div class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white text-[9px] shadow-sm">
+                <div class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-btn-text-primary text-[9px] shadow-sm">
                   <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
                 </div>
                 <div class="flex items-baseline justify-between">
@@ -457,7 +457,7 @@
 
               <!-- Step 3: Target Mutation / State Application -->
               <div class="relative">
-                <div class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white text-[9px] shadow-sm">
+                <div class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-btn-text-primary text-[9px] shadow-sm">
                   <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
                 </div>
                 <div class="flex items-baseline justify-between">

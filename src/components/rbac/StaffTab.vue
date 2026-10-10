@@ -14,7 +14,7 @@
       </div>
       <button
         v-if="hasPermission('team_management.create')"
-        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
         @click="dialogOpen = true"
       >
         <Plus class="w-3.5 h-3.5" /> Add Staff
@@ -76,7 +76,7 @@
           >
             <td class="px-4 py-3.5 group-last:rounded-bl-2xl">
               <div class="flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-white shrink-0">
+                <div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-btn-text-primary shrink-0">
                   {{ staff.name?.charAt(0)?.toUpperCase() }}
                 </div>
                 <p class="text-xs font-medium text-primary-text">{{ staff.name }}</p>

@@ -174,7 +174,7 @@
                     :href="fileUrl"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="mt-1 px-4 py-1.5 rounded-lg bg-primary text-white font-semibold text-xs flex items-center gap-1.5 shadow-2xs hover:bg-primary-hover transition"
+                    class="mt-1 px-4 py-1.5 rounded-lg bg-primary text-btn-text-primary font-semibold text-xs flex items-center gap-1.5 shadow-2xs hover:bg-primary-hover transition"
                   >
                     <ExternalLink class="w-3.5 h-3.5" />
                     View Document
@@ -238,7 +238,7 @@
               <button
                 type="button"
                 @click="closeDrawer"
-                class="px-5 py-2 text-xs font-semibold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition-colors cursor-pointer"
+                class="px-5 py-2 text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition-colors cursor-pointer"
               >
                 Close
               </button>

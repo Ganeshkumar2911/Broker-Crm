@@ -197,7 +197,7 @@
                   class="px-3 py-1 text-xs font-semibold rounded-md transition-colors cursor-pointer"
                   :class="[
                     walletFilterOnlyPositive
-                      ? 'bg-primary text-white font-bold'
+                      ? 'bg-primary text-btn-text-primary font-bold'
                       : 'text-secondary-text hover:text-primary-text'
                   ]"
                   @click="walletFilterOnlyPositive = true; loadDemoWallets(1, true);"
@@ -323,7 +323,7 @@
             class="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg transition-colors cursor-pointer"
             :class="
               selectedWalletIbId === row.ib_id
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-background border border-primary-border hover:bg-card-background text-primary-text'
             "
             @click="selectWalletForHistory(row)"

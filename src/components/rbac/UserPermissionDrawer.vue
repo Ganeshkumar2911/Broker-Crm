@@ -227,7 +227,7 @@
               <button
                 type="button"
                 :disabled="actionLoading || activeSelectedCount === 0"
-                class="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary/85 flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
+                class="px-5 py-2.5 rounded-lg text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary/85 flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
                 @click="executeActiveAction"
               >
                 <Loader2 v-if="actionLoading" class="w-3.5 h-3.5 animate-spin" />

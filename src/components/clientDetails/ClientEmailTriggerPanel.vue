@@ -42,7 +42,7 @@
                 class="px-4 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer"
                 :class="
                   activeTab === tab.value
-                    ? 'bg-primary text-white shadow-2xs'
+                    ? 'bg-primary text-btn-text-primary shadow-2xs'
                     : 'text-secondary-text hover:text-primary-text hover:bg-card-background/50'
                 "
                 @click="activeTab = tab.value"
@@ -166,7 +166,7 @@
                 <button
                   type="button"
                   :disabled="store.sendLoading || !client?.email || !store.selectedTemplate"
-                  class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xs cursor-pointer"
+                  class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xs cursor-pointer"
                   @click="sendTemplateEmailToClient"
                 >
                   <Loader2
@@ -260,7 +260,7 @@
                     !store.customEmail.body_html ||
                     !store.customEmail.tag
                   "
-                  class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xs cursor-pointer"
+                  class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xs cursor-pointer"
                   @click="sendCustomEmailToClient"
                 >
                   <Loader2

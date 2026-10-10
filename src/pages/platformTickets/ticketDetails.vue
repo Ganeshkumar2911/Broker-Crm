@@ -450,7 +450,7 @@
                         class="p-4 rounded-2xl text-xs leading-relaxed shadow-2xs space-y-2.5"
                         :class="[
                           item.isMe
-                            ? 'bg-primary text-white rounded-tr-xs'
+                            ? 'bg-primary text-btn-text-primary rounded-tr-xs'
                             : 'bg-card-background border border-primary-border text-primary-text rounded-tl-xs',
                         ]"
                       >

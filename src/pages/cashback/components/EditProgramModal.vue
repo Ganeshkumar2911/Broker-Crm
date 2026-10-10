@@ -183,7 +183,7 @@
         </button>
         <button
           type="button"
-          class="flex-1 px-4 py-2 text-sm font-medium bg-primary text-white rounded-lg hover:bg-primary-hover flex items-center justify-center gap-2 cursor-pointer transition"
+          class="flex-1 px-4 py-2 text-sm font-medium bg-primary text-btn-text-primary rounded-lg hover:bg-primary-hover flex items-center justify-center gap-2 cursor-pointer transition"
           @click="handleSubmit"
           :disabled="store.actionLoading"
         >

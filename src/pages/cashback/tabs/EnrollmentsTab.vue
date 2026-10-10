@@ -9,7 +9,7 @@
           type="button"
           class="px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition cursor-pointer"
           :class="selectedStatus === filter.value
-            ? 'bg-primary text-white shadow-xs'
+            ? 'bg-primary text-btn-text-primary shadow-xs'
             : 'bg-card-background text-secondary-text hover:text-primary-text border border-primary-border'"
           @click="selectStatus(filter.value)"
         >
@@ -18,7 +18,7 @@
       </div>
 
       <button
-        class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-hover transition-colors cursor-pointer"
+        class="px-4 py-2 bg-primary text-btn-text-primary text-sm font-medium rounded-lg hover:bg-primary-hover transition-colors cursor-pointer"
         @click="isEnrollModalOpen = true"
       >
         Enroll Account

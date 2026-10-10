@@ -35,7 +35,7 @@
         <button
           type="button"
           @click="openAddDrawer"
-          class="bg-primary hover:bg-primary-hover text-white rounded-xl px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer transition-all"
+          class="bg-primary hover:bg-primary-hover text-btn-text-primary rounded-xl px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer transition-all"
         >
           <Plus class="w-3.5 h-3.5" />
           Add Note
@@ -83,7 +83,7 @@
         <button
           type="button"
           @click="openAddDrawer"
-          class="mt-4 bg-primary hover:bg-primary-hover text-white rounded-xl px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5"
+          class="mt-4 bg-primary hover:bg-primary-hover text-btn-text-primary rounded-xl px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5"
         >
           <Plus class="w-3.5 h-3.5" />
           Add First Note

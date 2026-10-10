@@ -157,7 +157,7 @@ const handleAssign = async () => {
               <button
                 type="submit"
                 :disabled="store.actionLoading || !selectedGroupId || symbols.length === 0"
-                class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-xs font-semibold rounded-xl transition-all shadow-sm cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold rounded-xl transition-all shadow-sm cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <HugeIcon
                   v-if="store.actionLoading"

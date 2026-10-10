@@ -205,7 +205,7 @@
             <button
               v-if="redemption.status === 'PENDING' && hasPermission('loyalty_redemption.approve')"
               type="button"
-              class="px-3.5 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer text-xs shadow-xs"
+              class="px-3.5 py-2 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer text-xs shadow-xs"
               @click="$emit('approve', redemption)"
             >
               Approve

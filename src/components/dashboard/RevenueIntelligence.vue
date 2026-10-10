@@ -179,7 +179,7 @@ const pills = computed(() => [
             :class="[
               'px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all duration-150',
               revenueFilters.range === f.key
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'text-secondary-text hover:text-primary-text',
             ]"
           >

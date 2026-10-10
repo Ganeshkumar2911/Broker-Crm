@@ -7,7 +7,7 @@
           <button
             type="button"
             @click="store.openAdd()"
-            class="px-4 py-2.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary-hover transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+            class="px-4 py-2.5 rounded-lg text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Plus class="w-4 h-4" />
             <span>Add Telegram Bot</span>
@@ -98,7 +98,7 @@
               class="w-10 h-10 sm:w-12 sm:h-12 text-primary transition-transform duration-300 group-hover:-rotate-6"
             />
             <div
-              class="absolute -bottom-1 -right-1 w-6 h-6 rounded-lg bg-primary flex items-center justify-center text-white border-2 border-card-background"
+              class="absolute -bottom-1 -right-1 w-6 h-6 rounded-lg bg-primary flex items-center justify-center text-btn-text-primary border-2 border-card-background"
             >
               <Sparkles class="w-3.5 h-3.5" />
             </div>
@@ -134,7 +134,7 @@
         <button
           v-else-if="hasPermission('telegram.create')"
           @click="store.openAdd()"
-          class="px-6 py-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold hover:shadow-primary/40 transition-all duration-200 flex items-center gap-2 cursor-pointer group"
+          class="px-6 py-3 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold hover:shadow-primary/40 transition-all duration-200 flex items-center gap-2 cursor-pointer group"
         >
           <Plus class="w-4 h-4 transition-transform group-hover:rotate-90" />
           <span>Add Telegram Bot</span>

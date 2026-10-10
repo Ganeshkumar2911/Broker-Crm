@@ -14,7 +14,7 @@
 
           <span
             v-if="settlement?.settlement_id"
-            class="px-2.5 py-1 rounded-md text-xs font-bold bg-primary text-white"
+            class="px-2.5 py-1 rounded-md text-xs font-bold bg-primary text-btn-text-primary"
           >
             Settlement #{{ settlement.settlement_id }}
           </span>
@@ -71,7 +71,7 @@
             :disabled="store.loading"
             class="px-3 py-2 text-xs font-medium transition-colors cursor-pointer disabled:opacity-50"
             :class="store.amountView === opt.value
-              ? 'bg-primary text-white'
+              ? 'bg-primary text-btn-text-primary'
               : 'text-secondary-text hover:text-primary-text hover:bg-background'"
             @click="switchAmountView(opt.value)"
           >
@@ -135,7 +135,7 @@
         </p>
         <button
           v-if="!settlement"
-          class="mt-4 px-4 py-2 text-xs font-medium rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer"
+          class="mt-4 px-4 py-2 text-xs font-medium rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer"
           @click="router.push('/settlements')"
         >
           Return to Settlements
@@ -282,7 +282,7 @@
         <div class="flex items-center gap-1.5 overflow-x-auto">
           <button
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
-            :class="activeTab === 'users' ? 'bg-primary text-white' : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'"
+            :class="activeTab === 'users' ? 'bg-primary text-btn-text-primary' : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'"
             @click="activeTab = 'users'"
           >
             <Users class="w-3.5 h-3.5" />
@@ -297,7 +297,7 @@
 
           <button
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
-            :class="activeTab === 'ib_summary' ? 'bg-primary text-white' : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'"
+            :class="activeTab === 'ib_summary' ? 'bg-primary text-btn-text-primary' : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'"
             @click="activeTab = 'ib_summary'"
           >
             <PieChart class="w-3.5 h-3.5" />
@@ -313,7 +313,7 @@
           <button
             v-if="settlement?.agent_distribution?.length"
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
-            :class="activeTab === 'agent_distribution' ? 'bg-primary text-white' : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'"
+            :class="activeTab === 'agent_distribution' ? 'bg-primary text-btn-text-primary' : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'"
             @click="activeTab = 'agent_distribution'"
           >
             <Shield class="w-3.5 h-3.5" />
@@ -650,7 +650,7 @@
 
             <!-- Action Details Button -->
             <button
-              class="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl bg-primary text-white text-xs font-medium hover:bg-primary-hover transition-colors cursor-pointer"
+              class="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl bg-primary text-btn-text-primary text-xs font-medium hover:bg-primary-hover transition-colors cursor-pointer"
               @click.stop="goToUserDetails(u)"
             >
               <span>View Client Breakdown & Trades</span>

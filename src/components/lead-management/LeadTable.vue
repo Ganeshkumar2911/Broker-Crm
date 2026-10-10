@@ -264,7 +264,7 @@ function formatSourceLabel(source) {
         <button
           type="button"
           @click="emit('bulk-manage-tags', selectedLeadIds)"
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary hover:bg-primary-hover text-white transition-colors cursor-pointer"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary hover:bg-primary-hover text-btn-text-primary transition-colors cursor-pointer"
         >
           <Tag class="w-3.5 h-3.5" />
           <span>Manage Tags ({{ selectedLeadIds.length }})</span>

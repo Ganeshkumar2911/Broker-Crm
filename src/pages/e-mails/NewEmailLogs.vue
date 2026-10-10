@@ -100,7 +100,7 @@
               class="w-7 h-7 flex items-center justify-center rounded-md text-xs transition-colors cursor-pointer"
               :class="
                 layoutMode === 'grid'
-                  ? 'bg-primary text-white font-medium'
+                  ? 'bg-primary text-btn-text-primary font-medium'
                   : 'text-secondary-text hover:text-primary-text'
               "
             >
@@ -114,7 +114,7 @@
               class="w-7 h-7 flex items-center justify-center rounded-md text-xs transition-colors cursor-pointer"
               :class="
                 layoutMode === 'list'
-                  ? 'bg-primary text-white font-medium'
+                  ? 'bg-primary text-btn-text-primary font-medium'
                   : 'text-secondary-text hover:text-primary-text'
               "
             >
@@ -128,7 +128,7 @@
               class="w-7 h-7 flex items-center justify-center rounded-md text-xs transition-colors cursor-pointer"
               :class="
                 layoutMode === 'split'
-                  ? 'bg-primary text-white font-medium'
+                  ? 'bg-primary text-btn-text-primary font-medium'
                   : 'text-secondary-text hover:text-primary-text'
               "
             >
@@ -186,7 +186,7 @@
         <button
           v-if="searchQuery || store.hasActiveFilters"
           @click="handleResetAll"
-          class="px-4 py-2 text-xs font-semibold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+          class="px-4 py-2 text-xs font-semibold bg-primary text-btn-text-primary rounded-lg hover:bg-primary/90 transition-colors"
         >
           Clear Filters & Search
         </button>

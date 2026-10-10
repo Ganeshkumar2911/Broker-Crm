@@ -38,7 +38,7 @@
             class="px-3 py-2 text-xs font-medium transition-colors cursor-pointer disabled:opacity-50"
             :class="
               store.amountView === opt.value
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'text-secondary-text hover:text-primary-text hover:bg-background'
             "
             @click="switchAmountView(opt.value)"
@@ -62,7 +62,7 @@
         <button
           v-if="!hasEmptyData && hasPermission('fund_manager.run_seletement')"
           :disabled="store.runLoading || store.loading"
-          class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm shadow-primary/20"
+          class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm shadow-primary/20"
           @click="confirmOpen = true"
         >
           <Loader2 v-if="store.runLoading" class="w-3.5 h-3.5 animate-spin" />
@@ -351,7 +351,7 @@
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
             :class="
               activeTab === 'users'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="activeTab = 'users'"
@@ -374,7 +374,7 @@
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
             :class="
               activeTab === 'ib_summary'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="activeTab = 'ib_summary'"
@@ -398,7 +398,7 @@
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
             :class="
               activeTab === 'agent_distribution'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="activeTab = 'agent_distribution'"
@@ -984,7 +984,7 @@
 
             <!-- Action Details button -->
             <button
-              class="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl bg-primary text-white text-xs font-medium hover:bg-primary-hover transition-colors cursor-pointer mt-2"
+              class="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl bg-primary text-btn-text-primary text-xs font-medium hover:bg-primary-hover transition-colors cursor-pointer mt-2"
               @click="goToUserDetails(u)"
             >
               <span>View Client Breakdown & Trades</span>

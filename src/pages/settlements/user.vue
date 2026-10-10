@@ -20,7 +20,7 @@
 
           <span
             v-if="store.data?.settlement_id"
-            class="px-2.5 py-1 rounded-md text-xs font-bold bg-primary text-white"
+            class="px-2.5 py-1 rounded-md text-xs font-bold bg-primary text-btn-text-primary"
           >
             Settlement #{{ store.data.settlement_id }}
           </span>
@@ -57,7 +57,7 @@
             :disabled="store.loading"
             class="px-3 py-2 text-xs font-medium transition-colors cursor-pointer disabled:opacity-50"
             :class="store.amountView === opt.value
-              ? 'bg-primary text-white'
+              ? 'bg-primary text-btn-text-primary'
               : 'text-secondary-text hover:text-primary-text hover:bg-background'"
             @click="switchAmountView(opt.value)"
           >
@@ -123,7 +123,7 @@
           Unable to find settlement details for this client in settlement #{{ route.params.id }}.
         </p>
         <button
-          class="mt-4 px-4 py-2 text-xs font-medium rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer"
+          class="mt-4 px-4 py-2 text-xs font-medium rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer"
           @click="goBack"
         >
           Return to Settlement
@@ -433,7 +433,7 @@
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
             :class="
               activeTab === 'settlements'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="activeTab = 'settlements'"
@@ -457,7 +457,7 @@
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
             :class="
               activeTab === 'ib_distribution'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="activeTab = 'ib_distribution'"
@@ -481,7 +481,7 @@
             class="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
             :class="
               activeTab === 'agent_distribution'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="activeTab = 'agent_distribution'"
@@ -528,7 +528,7 @@
             class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0"
             :class="
               selectedFollowerId === 'ALL'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="selectedFollowerId = 'ALL'"
@@ -541,7 +541,7 @@
             class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer shrink-0 flex items-center gap-1.5"
             :class="
               selectedFollowerId === String(follower.follower_id)
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-btn-text-primary'
                 : 'bg-card-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="selectedFollowerId = String(follower.follower_id)"

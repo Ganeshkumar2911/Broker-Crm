@@ -123,7 +123,7 @@ function handleStageClick(code) {
               :class="[
                 'w-5 h-5 rounded-full flex items-center justify-center border transition-all duration-200 z-10 shrink-0 shadow-xs group-hover:scale-110 group-hover:translate-x-0.5',
                 selectedStage === stg.code
-                  ? 'bg-primary text-white border-primary shadow-sm shadow-primary/30'
+                  ? 'bg-primary text-btn-text-primary border-primary shadow-sm shadow-primary/30'
                   : 'bg-card-background text-secondary-text border-primary-border group-hover:border-primary/60 group-hover:text-primary',
               ]"
             >
@@ -136,7 +136,7 @@ function handleStageClick(code) {
             :class="[
               'relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs transition-all duration-200 border-2',
               selectedStage === stg.code
-                ? 'bg-primary border-primary text-white shadow-primary/30 scale-110'
+                ? 'bg-primary border-primary text-btn-text-primary shadow-primary/30 scale-110'
                 : 'bg-background border-primary-border text-secondary-text group-hover:border-primary/50 group-hover:text-primary-text',
             ]"
           >

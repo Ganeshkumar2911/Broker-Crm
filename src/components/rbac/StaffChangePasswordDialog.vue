@@ -170,7 +170,7 @@ const submitResetPassword = () => {
         <button
           type="button"
           :disabled="staffStore.actionLoading || !!passwordError || !newPassword"
-          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
           @click="submitResetPassword"
         >
           <Loader2 v-if="staffStore.actionLoading" class="w-3.5 h-3.5 animate-spin" />

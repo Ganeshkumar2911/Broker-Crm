@@ -10,7 +10,7 @@
           type="button"
           class="px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition cursor-pointer"
           :class="selectedType === type.value
-            ? 'bg-primary text-white shadow-xs'
+            ? 'bg-primary text-btn-text-primary shadow-xs'
             : 'bg-background text-secondary-text hover:text-primary-text border border-primary-border'"
           @click="selectType(type.value)"
         >

@@ -253,7 +253,7 @@
           <button
             type="button"
             :disabled="loading"
-            class="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm"
+            class="px-6 py-2.5 rounded-xl text-xs font-bold text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm"
             @click="submit"
           >
             <Loader2 v-if="loading" class="w-3.5 h-3.5 animate-spin" />

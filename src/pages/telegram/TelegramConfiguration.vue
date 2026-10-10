@@ -17,7 +17,7 @@
           <button
             v-if="hasPermission(['telegram.configure_create', 'telegram.configure_update'])"
             @click="store.openAdd()"
-            class="px-4 py-2.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary-hover shadow-primary/20 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+            class="px-4 py-2.5 rounded-lg text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover shadow-primary/20 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Plus class="w-4 h-4" />
             <span>Add Telegram Configuration</span>

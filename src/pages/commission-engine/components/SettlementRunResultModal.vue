@@ -276,7 +276,7 @@ const getStatusBadge = (status) => {
           >
             <button
               type="button"
-              class="px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer"
+              class="px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer"
               @click="closeModal"
             >
               Close

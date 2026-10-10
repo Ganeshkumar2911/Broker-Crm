@@ -124,7 +124,7 @@
             <button
               @click="handleScan"
               :disabled="loading || !form.comment"
-              class="px-5 py-2 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2 transition-colors"
+              class="px-5 py-2 bg-primary text-btn-text-primary text-sm font-bold rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2 transition-colors"
             >
               <Search class="w-4 h-4" v-if="!loading" />
               <RotateCw class="w-4 h-4 animate-spin" v-else />

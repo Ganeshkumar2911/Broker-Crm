@@ -7,7 +7,7 @@
         v-for="tab in tabs"
         :key="tab.value"
         class="px-4 py-1.5 rounded-md text-xs font-medium transition-colors"
-        :class="activeTab === tab.value ? 'bg-primary text-white' : 'text-secondary-text hover:text-primary-text'"
+        :class="activeTab === tab.value ? 'bg-primary text-btn-text-primary' : 'text-secondary-text hover:text-primary-text'"
         @click="activeTab = tab.value"
       >
         {{ tab.label }}
@@ -115,7 +115,7 @@
         </button>
         <button
           :disabled="store.sendLoading || !store.selectedRecipients.length || !store.selectedTemplate"
-          class="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+          class="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           @click="store.sendTemplateEmail()"
         >
           <Loader2 v-if="store.sendLoading" class="w-3.5 h-3.5 animate-spin" />
@@ -216,7 +216,7 @@
         </button>
         <button
           :disabled="store.sendLoading || !store.selectedRecipients.length || !store.customEmail.subject || !store.customEmail.body_html"
-          class="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+          class="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           @click="store.sendCustomEmail()"
         >
           <Loader2 v-if="store.sendLoading" class="w-3.5 h-3.5 animate-spin" />

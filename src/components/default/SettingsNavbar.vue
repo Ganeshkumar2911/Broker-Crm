@@ -12,7 +12,7 @@
         class="group relative flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer shrink-0 outline-none select-none"
         :class="[
           modelValue === tab.value
-            ? 'bg-primary text-white shadow-xs'
+            ? 'bg-primary text-btn-text-primary shadow-xs'
             : 'text-secondary-text hover:text-primary-text hover:bg-background/60',
         ]"
       >

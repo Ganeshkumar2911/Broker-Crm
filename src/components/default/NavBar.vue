@@ -388,7 +388,7 @@ const handleFlyoutMouseLeave = () => {
 
   <!-- Sidebar -->
   <aside
-    class="fixed top-0 left-0 z-40 h-full bg-navbar text-white border-r border-white/10 flex flex-col transition-all duration-300 ease-in-out -translate-x-full md:translate-x-0"
+    class="fixed top-0 left-0 z-40 h-full bg-navbar text-navbar-text border-r border-navbar-border flex flex-col transition-all duration-300 ease-in-out -translate-x-full md:translate-x-0"
     :class="[
       { 'translate-x-0': isOpen },
       isCollapsed ? 'w-[80px]' : 'w-[240px]',
@@ -396,11 +396,12 @@ const handleFlyoutMouseLeave = () => {
   >
     <!-- Header -->
     <div
-      class="h-[60px] flex items-center justify-between px-4 border-b border-white/10"
+      class="h-[60px] flex items-center justify-between px-4 border-b border-navbar-border"
     >
       <div v-if="!isCollapsed" class="flex items-center gap-2.5 w-full">
         <div class="flex items-center justify-center w-full">
-          <img src="/logo_full.png" alt="Logo" class="max-h-8 w-auto object-contain" />
+          <img src="/logo_full.png" alt="Logo" class="max-h-8 w-auto object-contain hidden-on-light-nav" />
+          <img src="/logo_full_dark.png" alt="Logo" class="max-h-8 w-auto object-contain hidden-on-dark-nav" />
         </div>
       </div>
       <div v-else class="flex items-center justify-center w-full">
@@ -414,7 +415,7 @@ const handleFlyoutMouseLeave = () => {
     <div v-if="!isCollapsed" class="px-3 pt-3 pb-1">
       <div class="relative flex items-center">
         <Search
-          class="absolute left-2.5 w-3.5 h-3.5 text-white/40 pointer-events-none"
+          class="absolute left-2.5 w-3.5 h-3.5 text-navbar-text opacity-40 pointer-events-none"
         />
         <input
           ref="searchInputRef"
@@ -422,13 +423,13 @@ const handleFlyoutMouseLeave = () => {
           type="text"
           placeholder="Search modules..."
           @keydown="handleSearchKeydown"
-          class="w-full h-8 pl-8 pr-7 bg-white/5 hover:bg-white/10 focus:bg-white/10 text-white placeholder-white/40 text-xs rounded-lg border border-white/10 focus:border-primary/50 focus:outline-none transition-all"
+          class="w-full h-8 pl-8 pr-7 bg-navbar-hover opacity-70 hover:bg-navbar-hover focus:bg-navbar-hover text-navbar-text placeholder-white/40 text-xs rounded-lg border border-navbar-border focus:border-primary/50 focus:outline-none transition-all"
         />
         <button
           v-if="searchQuery"
           @click="clearSearch"
           type="button"
-          class="absolute right-2 text-white/40 hover:text-white p-0.5 transition-colors"
+          class="absolute right-2 text-navbar-text opacity-40 hover:text-navbar-text p-0.5 transition-colors"
         >
           <X class="w-3 h-3" />
         </button>
@@ -438,7 +439,7 @@ const handleFlyoutMouseLeave = () => {
       <Tooltip text="Search (⌘K)" position="right">
         <button
           @click="emit('toggle-collapse')"
-          class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 hover:text-white flex items-center justify-center transition-all"
+          class="w-10 h-10 rounded-xl bg-navbar-hover opacity-70 hover:bg-navbar-hover text-navbar-text-muted hover:text-navbar-text flex items-center justify-center transition-all"
         >
           <Search class="w-4 h-4" />
         </button>
@@ -451,7 +452,7 @@ const handleFlyoutMouseLeave = () => {
       <template v-if="searchQuery.trim()">
         <div class="space-y-1">
           <div
-            class="px-2 py-1 flex items-center justify-between text-[11px] font-semibold text-white/40 uppercase tracking-wider"
+            class="px-2 py-1 flex items-center justify-between text-[11px] font-semibold text-navbar-text opacity-40 uppercase tracking-wider"
           >
             <span>Results ({{ searchResults.length }})</span>
             <button
@@ -463,8 +464,8 @@ const handleFlyoutMouseLeave = () => {
           </div>
 
           <div v-if="searchResults.length === 0" class="py-8 text-center">
-            <p class="text-xs text-white/50">No modules found</p>
-            <p class="text-[11px] text-white/30 mt-0.5">
+            <p class="text-xs text-navbar-text-muted">No modules found</p>
+            <p class="text-[11px] text-navbar-text opacity-30 mt-0.5">
               Try searching another keyword
             </p>
           </div>
@@ -483,25 +484,24 @@ const handleFlyoutMouseLeave = () => {
             class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-150 group cursor-pointer"
             :class="[
               selectedIndex === index
-                ? 'bg-primary text-white shadow-sm font-semibold'
+                ? 'bg-primary text-btn-text-primary shadow-sm font-semibold'
                 : isActive(item.to)
-                  ? 'bg-white/10 text-white font-semibold'
-                  : 'text-white/70 hover:text-white hover:bg-white/10',
+                  ? 'bg-navbar-hover text-navbar-text font-semibold'
+                  : 'text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover',
             ]"
           >
             <component
               :is="item.icon"
-              class="w-4 h-4 flex-shrink-0 transition-transform group-hover:scale-110"
-              :class="selectedIndex === index ? 'text-white' : 'text-white/70'"
+              class="w-4 h-4 flex-shrink-0 transition-transform group-hover:scale-110 opacity-90"
             />
             <div class="min-w-0 flex-1">
-              <div class="text-xs font-medium truncate text-white">
+              <div class="text-xs font-medium truncate">
                 {{ item.label }}
               </div>
               <div
                 class="text-[10px] truncate"
                 :class="
-                  selectedIndex === index ? 'text-white/80' : 'text-white/40'
+                  selectedIndex === index ? 'opacity-80' : 'opacity-60'
                 "
               >
                 {{ item.clusterName }}
@@ -509,13 +509,13 @@ const handleFlyoutMouseLeave = () => {
             </div>
             <span
               v-if="selectedIndex === index"
-              class="ml-auto text-[10px] text-white/90 bg-white/20 px-1.5 py-0.5 rounded font-mono font-medium"
+              class="ml-auto text-[10px] opacity-90 bg-black/10 px-1.5 py-0.5 rounded font-mono font-medium"
             >
               ↵
             </span>
             <span
               v-else-if="isActive(item.to)"
-              class="ml-auto w-1.5 h-1.5 rounded-full bg-white"
+              class="ml-auto w-1.5 h-1.5 rounded-full bg-current"
             />
           </RouterLink>
         </div>
@@ -537,21 +537,21 @@ const handleFlyoutMouseLeave = () => {
               class="flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 group"
               :class="[
                 isActive(cluster.to)
-                  ? 'bg-primary text-white shadow-sm'
-                  : 'text-white/70 hover:text-white hover:bg-white/10',
+                  ? 'bg-primary text-btn-text-primary shadow-sm'
+                  : 'text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover',
                 isCollapsed ? 'justify-center' : '',
               ]"
             >
               <component
                 :is="cluster.icon"
-                class="w-4 h-4 transition-transform group-hover:scale-110 flex-shrink-0"
+                class="w-4 h-4 transition-transform group-hover:scale-110 flex-shrink-0 opacity-90"
               />
-              <span v-if="!isCollapsed">{{ cluster.label }}</span>
+              <span v-if="!isCollapsed" class="truncate">{{ cluster.label }}</span>
 
               <!-- Active dot -->
               <span
                 v-if="isActive(cluster.to) && !isCollapsed"
-                class="ml-auto w-1.5 h-1.5 rounded-full bg-white"
+                class="ml-auto w-1.5 h-1.5 rounded-full bg-current"
               />
             </RouterLink>
           </Tooltip>
@@ -571,8 +571,8 @@ const handleFlyoutMouseLeave = () => {
               class="w-full flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-200 relative group"
               :class="[
                 isClusterActive(cluster)
-                  ? 'bg-primary text-white shadow-sm'
-                  : 'text-white/70 hover:text-white hover:bg-white/10',
+                  ? 'bg-primary text-navbar-text shadow-sm'
+                  : 'text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover',
               ]"
             >
               <component
@@ -582,7 +582,7 @@ const handleFlyoutMouseLeave = () => {
               <!-- Active child indicator dot -->
               <span
                 v-if="isClusterActive(cluster)"
-                class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-white ring-2 ring-navbar"
+                class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-navbar-text ring-2 ring-navbar"
               />
             </button>
           </div>
@@ -596,19 +596,14 @@ const handleFlyoutMouseLeave = () => {
               class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 select-none group"
               :class="[
                 isClusterActive(cluster)
-                  ? 'text-white font-semibold bg-white/5'
-                  : 'text-white/70 hover:text-white hover:bg-white/10',
+                  ? 'text-navbar-text font-semibold bg-navbar-hover opacity-70'
+                  : 'text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover',
               ]"
             >
               <div class="flex items-center gap-2.5 min-w-0">
                 <component
                   :is="cluster.icon"
-                  class="w-4 h-4 transition-transform group-hover:scale-110 flex-shrink-0"
-                  :class="
-                    isClusterActive(cluster)
-                      ? 'text-primary-light'
-                      : 'text-white/70'
-                  "
+                  class="w-4 h-4 transition-transform group-hover:scale-110 flex-shrink-0 opacity-90"
                 />
                 <span class="truncate">{{ cluster.label }}</span>
               </div>
@@ -617,13 +612,13 @@ const handleFlyoutMouseLeave = () => {
                 <!-- Active dot if cluster is closed but has active child -->
                 <span
                   v-if="isClusterActive(cluster) && !isClusterOpen(cluster.id)"
-                  class="w-1.5 h-1.5 rounded-full bg-primary"
+                  class="w-1.5 h-1.5 rounded-full bg-current"
                 />
                 <!-- Accordion Chevron -->
                 <ChevronDown
-                  class="w-3.5 h-3.5 text-white/50 transition-transform duration-200"
+                  class="w-3.5 h-3.5 opacity-50 transition-transform duration-200"
                   :class="{
-                    'rotate-180 text-white': isClusterOpen(cluster.id),
+                    'rotate-180 opacity-100': isClusterOpen(cluster.id),
                   }"
                 />
               </div>
@@ -633,7 +628,7 @@ const handleFlyoutMouseLeave = () => {
             <Transition name="accordion">
               <div
                 v-if="isClusterOpen(cluster.id)"
-                class="ml-3 pl-3 my-0.5 border-l border-white/15 space-y-0.5"
+                class="ml-3 pl-3 my-0.5 border-l border-navbar-border space-y-0.5"
               >
                 <RouterLink
                   v-for="child in cluster.children"
@@ -643,26 +638,26 @@ const handleFlyoutMouseLeave = () => {
                   class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 group"
                   :class="[
                     isActive(child.to)
-                      ? 'bg-primary text-white shadow-sm font-semibold'
-                      : 'text-white/65 hover:text-white hover:bg-white/10',
+                      ? 'bg-primary text-btn-text-primary shadow-sm font-semibold'
+                      : 'text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover',
                   ]"
                 >
                   <HugeiconsIcon
                     v-if="child.hugeIcon"
                     :icon="child.hugeIcon"
-                    class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:scale-105"
+                    class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:scale-105 opacity-90"
                   />
                   <component
                     v-else
                     :is="child.icon"
-                    class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:scale-105"
+                    class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:scale-105 opacity-90"
                   />
                   <span class="truncate">{{ child.label }}</span>
 
                   <!-- Active indicator dot -->
                   <span
                     v-if="isActive(child.to)"
-                    class="ml-auto w-1 h-1 rounded-full bg-white"
+                    class="ml-auto w-1 h-1 rounded-full bg-current"
                   />
                 </RouterLink>
               </div>
@@ -673,7 +668,7 @@ const handleFlyoutMouseLeave = () => {
     </nav>
 
     <!-- Footer -->
-    <div class="border-t border-white/10">
+    <div class="border-t border-navbar-border">
       <!-- User Info -->
       <div class="p-4">
         <div
@@ -688,15 +683,15 @@ const handleFlyoutMouseLeave = () => {
             <div
               class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"
             >
-              <span class="text-white text-xs font-bold">{{
+              <span class="text-btn-text-primary text-xs font-bold">{{
                 store.user?.name?.charAt(0).toUpperCase() || "S"
               }}</span>
             </div>
             <div class="min-w-0">
-              <p class="text-white text-xs font-semibold truncate">
+              <p class="text-navbar-text text-xs font-semibold truncate">
                 {{ store.user?.name }}
               </p>
-              <p class="text-white text-[11px] capitalize truncate">
+              <p class="text-navbar-text text-[11px] capitalize truncate">
                 {{ store.user?.role === "staff" ? "admin" : store.user?.role }}
               </p>
             </div>
@@ -705,7 +700,7 @@ const handleFlyoutMouseLeave = () => {
           <Tooltip v-if="isCollapsed" text="Expand" position="right">
             <button
               @click="emit('toggle-collapse')"
-              class="flex items-center justify-center w-10 h-10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200"
+              class="flex items-center justify-center w-10 h-10 rounded-lg text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover transition-all duration-200"
             >
               <ChevronRight class="w-5 h-5" />
             </button>
@@ -713,7 +708,7 @@ const handleFlyoutMouseLeave = () => {
           <button
             v-else
             @click="emit('toggle-collapse')"
-            class="flex items-center justify-center w-10 h-10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200 ml-auto"
+            class="flex items-center justify-center w-10 h-10 rounded-lg text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover transition-all duration-200 ml-auto"
             title="Collapse"
           >
             <ChevronLeft class="w-5 h-5" />
@@ -727,7 +722,7 @@ const handleFlyoutMouseLeave = () => {
   <Teleport to="body">
     <div
       v-if="isCollapsed && hoveredCluster"
-      class="fixed z-50 min-w-[210px] max-w-[260px] py-2 px-1.5 bg-[#141822] text-white border border-white/15 rounded-xl shadow-2xl backdrop-blur-xl"
+      class="fixed z-50 min-w-[210px] max-w-[260px] py-2 px-1.5 bg-[#141822] text-navbar-text border border-navbar-border rounded-xl shadow-2xl backdrop-blur-xl"
       :style="{
         top: `${flyoutPos.top}px`,
         left: `${flyoutPos.left}px`,
@@ -737,10 +732,10 @@ const handleFlyoutMouseLeave = () => {
     >
       <!-- Flyout Header -->
       <div
-        class="px-2.5 py-1 mb-1 border-b border-white/10 flex items-center gap-2"
+        class="px-2.5 py-1 mb-1 border-b border-navbar-border flex items-center gap-2"
       >
         <component :is="hoveredCluster.icon" class="w-3.5 h-3.5 text-primary" />
-        <span class="text-xs font-semibold text-white/90 tracking-wide">
+        <span class="text-xs font-semibold text-navbar-text opacity-90 tracking-wide">
           {{ hoveredCluster.label }}
         </span>
       </div>
@@ -758,18 +753,18 @@ const handleFlyoutMouseLeave = () => {
           class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 group"
           :class="[
             isActive(child.to)
-              ? 'bg-primary text-white shadow-sm font-semibold'
-              : 'text-white/70 hover:text-white hover:bg-white/10',
+              ? 'bg-primary text-btn-text-primary shadow-sm font-semibold'
+              : 'text-navbar-text-muted hover:text-navbar-text hover:bg-navbar-hover',
           ]"
         >
           <component
             :is="child.icon"
-            class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:scale-105"
+            class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:scale-105 opacity-90"
           />
           <span class="truncate">{{ child.label }}</span>
           <span
             v-if="isActive(child.to)"
-            class="ml-auto w-1 h-1 rounded-full bg-white"
+            class="ml-auto w-1 h-1 rounded-full bg-current"
           />
         </RouterLink>
       </div>

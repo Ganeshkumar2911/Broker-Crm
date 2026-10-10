@@ -101,7 +101,7 @@
                 </div>
                 <div
                   v-if="selectedLinkId === null"
-                  class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white shrink-0"
+                  class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-btn-text-primary shrink-0"
                 >
                   <Check class="w-2.5 h-2.5" />
                 </div>
@@ -126,7 +126,7 @@
                 </div>
                 <div
                   v-if="selectedLinkId === null"
-                  class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white shrink-0"
+                  class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-btn-text-primary shrink-0"
                 >
                   <Check class="w-2.5 h-2.5" />
                 </div>
@@ -163,7 +163,7 @@
                 </div>
                 <div
                   v-if="selectedLinkId === link.id"
-                  class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white shrink-0 mt-0.5"
+                  class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-btn-text-primary shrink-0 mt-0.5"
                 >
                   <Check class="w-2.5 h-2.5" />
                 </div>
@@ -182,7 +182,7 @@
           </button>
           <button
             :disabled="isSubmitting || linksLoading || !client?.ib_id"
-            class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+            class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
             @click="handleSubmit"
           >
             <Loader2 v-if="isSubmitting" class="w-3.5 h-3.5 animate-spin" />

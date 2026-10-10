@@ -5,7 +5,7 @@
       <!-- Action buttons -->
       <div v-if="hasPermission('ib.referal_link_create')" class="flex items-center gap-2.5 self-start sm:self-auto">
         <button
-          class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer shadow-xs"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer shadow-xs"
           @click="openCreateDrawer"
         >
           <PlusCircle :size="14" />
@@ -53,7 +53,7 @@
       </div>
       <button
         v-if="hasPermission('ib.referal_link_create')"
-        class="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer inline-flex items-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform transition"
+        class="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer inline-flex items-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform transition"
         @click="openCreateDrawer"
       >
         <PlusCircle :size="14" />

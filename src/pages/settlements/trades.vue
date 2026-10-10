@@ -16,7 +16,7 @@
           <div class="flex items-center gap-2.5 flex-wrap">
             <h1 class="text-base font-bold text-primary-text">Settlement Trades Snapshot</h1>
 
-            <span class="px-2 py-0.5 rounded-md text-xs font-bold bg-primary text-white">
+            <span class="px-2 py-0.5 rounded-md text-xs font-bold bg-primary text-btn-text-primary">
               Settlement #{{ settlementId }}
             </span>
 

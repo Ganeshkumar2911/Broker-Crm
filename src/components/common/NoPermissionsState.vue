@@ -63,7 +63,7 @@ onUnmounted(() => {
     <button
       :disabled="isLoading || countdown > 0"
       @click="handleRetry"
-      class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-medium bg-primary text-white hover:bg-primary/90 transition-colors shadow-sm cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+      class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-medium bg-primary text-btn-text-primary hover:bg-primary/90 transition-colors shadow-sm cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
     >
       <Loader2 v-if="isLoading" class="w-4 h-4 animate-spin" />
       <RefreshCw v-else class="w-4 h-4" />

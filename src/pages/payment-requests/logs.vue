@@ -33,7 +33,7 @@
           class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer"
           :class="
             store.source === 'logs'
-              ? 'bg-primary text-white shadow-sm'
+              ? 'bg-primary text-btn-text-primary shadow-sm'
               : 'text-secondary-text hover:text-primary-text'
           "
           @click="store.setSource('logs')"
@@ -46,7 +46,7 @@
           class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer"
           :class="
             store.source === 'transaction'
-              ? 'bg-primary text-white shadow-sm'
+              ? 'bg-primary text-btn-text-primary shadow-sm'
               : 'text-secondary-text hover:text-primary-text'
           "
           @click="store.setSource('transaction')"

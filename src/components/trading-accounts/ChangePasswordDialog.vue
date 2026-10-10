@@ -190,7 +190,7 @@ const submitChangePassword = () => {
         </button>
         <button
           type="button"
-          class="flex-1 rounded-lg bg-primary px-4 py-2.5 text-xs font-medium text-white transition-colors hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2"
+          class="flex-1 rounded-lg bg-primary px-4 py-2.5 text-xs font-medium text-btn-text-primary transition-colors hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2"
           :disabled="loading || !!passwordError || !newPassword"
           @click="submitChangePassword"
         >

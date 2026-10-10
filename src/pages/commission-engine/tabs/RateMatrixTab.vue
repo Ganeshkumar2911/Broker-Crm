@@ -825,7 +825,7 @@ const handleSave = async () => {
                           type="button"
                           :disabled="!canManageRates"
                           class="px-1.5 py-0.5 text-[10px] font-mono font-bold rounded-full transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-                          :class="getCellType(row.ib_id, sg.id) === 'value' ? 'bg-primary text-white' : 'text-secondary-text hover:text-primary-text hover:bg-card-background'"
+                          :class="getCellType(row.ib_id, sg.id) === 'value' ? 'bg-primary text-btn-text-primary' : 'text-secondary-text hover:text-primary-text hover:bg-card-background'"
                           @click="handleCellTypeChange(row.ib_id, sg.id, 'value')"
                         >
                           val
@@ -834,7 +834,7 @@ const handleSave = async () => {
                           type="button"
                           :disabled="!canManageRates"
                           class="px-1.5 py-0.5 text-[10px] font-mono font-bold rounded-full transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-                          :class="getCellType(row.ib_id, sg.id) === 'percent' ? 'bg-primary text-white' : 'text-secondary-text hover:text-primary-text hover:bg-card-background'"
+                          :class="getCellType(row.ib_id, sg.id) === 'percent' ? 'bg-primary text-btn-text-primary' : 'text-secondary-text hover:text-primary-text hover:bg-card-background'"
                           @click="handleCellTypeChange(row.ib_id, sg.id, 'percent')"
                         >
                           %
@@ -921,7 +921,7 @@ const handleSave = async () => {
               v-if="canManageRates"
               type="button"
               :disabled="store.actionLoading"
-              class="flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-hover text-white text-xs font-bold rounded-lg transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center "
+              class="flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold rounded-lg transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center "
               @click="handleSave"
             >
               <HugeIcon

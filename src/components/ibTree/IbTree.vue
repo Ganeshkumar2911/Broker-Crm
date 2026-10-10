@@ -20,7 +20,7 @@
           </div>
 
           <!-- Avatar -->
-          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[11px] font-medium text-white shrink-0">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[11px] font-medium text-btn-text-primary shrink-0">
             {{ (node.name || node.email || 'I').charAt(0).toUpperCase() }}
           </div>
 

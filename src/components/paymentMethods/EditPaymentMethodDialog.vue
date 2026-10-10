@@ -733,7 +733,7 @@
                 type="button"
                 class="flex-1 py-1.5 rounded-lg font-semibold transition cursor-pointer flex items-center justify-center gap-1.5"
                 :class="metaActiveTab === 'deposit'
-                  ? 'bg-primary text-white shadow-2xs'
+                  ? 'bg-primary text-btn-text-primary shadow-2xs'
                   : 'text-secondary-text hover:text-primary-text'"
                 @click="metaActiveTab = 'deposit'"
               >
@@ -747,7 +747,7 @@
                 type="button"
                 class="flex-1 py-1.5 rounded-lg font-semibold transition cursor-pointer flex items-center justify-center gap-1.5"
                 :class="metaActiveTab === 'withdrawal'
-                  ? 'bg-primary text-white shadow-2xs'
+                  ? 'bg-primary text-btn-text-primary shadow-2xs'
                   : 'text-secondary-text hover:text-primary-text'"
                 @click="metaActiveTab = 'withdrawal'"
               >
@@ -1154,7 +1154,7 @@
 
             <button
               type="button"
-              class="flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition active:scale-95 cursor-pointer disabled:opacity-60 shadow-xs"
+              class="flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition active:scale-95 cursor-pointer disabled:opacity-60 shadow-xs"
               :disabled="submitting || !hasChanges"
               @click="submit"
             >

@@ -35,7 +35,7 @@
       <!-- Quick Action: Resend -->
       <button
         @click="handleResendData(store?.logDetails?.campaign_id)"
-        class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors cursor-pointer shrink-0"
+        class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary/90 rounded-lg transition-colors cursor-pointer shrink-0"
       >
         <Send class="w-3.5 h-3.5" />
         <span>Resend Email</span>

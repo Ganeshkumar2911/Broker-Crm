@@ -612,7 +612,7 @@
         <!-- For FM Master Trade Book: Show Single Master Trades Tab -->
         <div v-if="!isFollowerMode" class="flex items-center gap-1.5">
           <div
-            class="px-3.5 py-1.5 rounded-lg text-xs font-bold inline-flex items-center gap-2 bg-primary text-white "
+            class="px-3.5 py-1.5 rounded-lg text-xs font-bold inline-flex items-center gap-2 bg-primary text-btn-text-primary "
           >
             <Layers class="w-3.5 h-3.5" />
             <span>Master Trades</span>
@@ -638,7 +638,7 @@
             class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-2"
             :class="
               store.activeTab === 'positions'
-                ? 'bg-primary text-white '
+                ? 'bg-primary text-btn-text-primary '
                 : 'bg-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="store.setActiveTab('positions')"
@@ -661,7 +661,7 @@
             class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-2"
             :class="
               store.activeTab === 'orders'
-                ? 'bg-primary text-white '
+                ? 'bg-primary text-btn-text-primary '
                 : 'bg-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="store.setActiveTab('orders')"
@@ -684,7 +684,7 @@
             class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-2"
             :class="
               store.activeTab === 'deals'
-                ? 'bg-primary text-white '
+                ? 'bg-primary text-btn-text-primary '
                 : 'bg-background border border-primary-border text-secondary-text hover:text-primary-text'
             "
             @click="store.setActiveTab('deals')"

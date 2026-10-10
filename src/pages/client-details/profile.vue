@@ -403,7 +403,7 @@
                 v-else-if="canApproveKyc || canRejectKyc"
                 type="button"
                 @click="openApprovalModal(canApproveKyc ? 'approve' : 'reject')"
-                class="bg-primary hover:bg-primary-hover text-white rounded-xl px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer transition-all"
+                class="bg-primary hover:bg-primary-hover text-btn-text-primary rounded-xl px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer transition-all"
                 :title="canApproveKyc && canRejectKyc ? 'Review and Approve / Reject KYC Documents' : canApproveKyc ? 'Review and Approve KYC Documents' : 'Review and Reject KYC Documents'"
               >
                 <ShieldCheck v-if="canApproveKyc" class="w-3.5 h-3.5" />

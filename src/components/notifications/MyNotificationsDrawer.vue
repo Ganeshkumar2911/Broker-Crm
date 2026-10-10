@@ -32,7 +32,7 @@
                   </h2>
                   <span
                     v-if="store.unreadCount > 0"
-                    class="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-primary text-white min-w-4.5 text-center"
+                    class="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-primary text-btn-text-primary min-w-4.5 text-center"
                   >
                     {{ store.unreadCount }}
                   </span>

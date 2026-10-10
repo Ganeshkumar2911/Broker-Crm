@@ -99,7 +99,7 @@
             type="submit"
             form="backfill-form"
             :disabled="store.actionLoading"
-            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 text-xs shadow-xs"
+            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 text-xs shadow-xs"
           >
             <Loader2 v-if="store.actionLoading" class="w-4 h-4 animate-spin" />
             <span>{{ store.actionLoading ? 'Queuing...' : 'Queue Backfill Job' }}</span>

@@ -6,14 +6,14 @@
         <div class="flex items-center gap-1 bg-card-background border border-primary-border rounded-lg p-1 shrink-0 self-start sm:self-auto">
           <button
             class="px-3 py-1.5 rounded-md text-xs font-medium transition-colors"
-            :class="viewMode === 'table' ? 'bg-primary text-white' : 'text-secondary-text hover:text-primary-text'"
+            :class="viewMode === 'table' ? 'bg-primary text-btn-text-primary' : 'text-secondary-text hover:text-primary-text'"
             @click="viewMode = 'table'"
           >
             Table
           </button>
           <button
             class="px-3 py-1.5 rounded-md text-xs font-medium transition-colors"
-            :class="viewMode === 'tree' ? 'bg-primary text-white' : 'text-secondary-text hover:text-primary-text'"
+            :class="viewMode === 'tree' ? 'bg-primary text-btn-text-primary' : 'text-secondary-text hover:text-primary-text'"
             @click="viewMode = 'tree'"
           >
             Tree

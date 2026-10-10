@@ -68,7 +68,7 @@
 
       <button
         type="button"
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer text-xs"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer text-xs"
         @click="fetchData"
       >
         <Search class="w-3 h-3" />

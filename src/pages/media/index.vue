@@ -19,7 +19,7 @@
 
         <button
           type="button"
-          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all cursor-pointer"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all cursor-pointer"
           @click="panel = { open: true, editData: null }"
         >
           <Plus class="w-4 h-4" />
@@ -73,7 +73,7 @@
       </div>
       <button
         type="button"
-        class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all cursor-pointer"
+        class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all cursor-pointer"
         @click="panel = { open: true, editData: null }"
       >
         <Plus class="w-4 h-4" />
@@ -149,7 +149,7 @@
           <div class="flex items-center gap-2" @click.stop>
             <button
               type="button"
-              class="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all cursor-pointer"
+              class="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all cursor-pointer"
               @click="router.push(`/media/${group.id}`)"
             >
               <FolderOpen class="w-3.5 h-3.5" />

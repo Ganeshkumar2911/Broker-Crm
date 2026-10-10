@@ -131,7 +131,7 @@
       <button
         v-else
         @click="refreshData"
-        class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-xs font-semibold text-white transition-colors cursor-pointer flex items-center gap-2"
+        class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-xs font-semibold text-btn-text-primary transition-colors cursor-pointer flex items-center gap-2"
       >
         <RotateCw class="w-3.5 h-3.5" />
         <span>Reload Configurations</span>

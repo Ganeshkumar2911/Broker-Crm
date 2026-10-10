@@ -9,7 +9,7 @@
         :key="tab.value"
         class="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer"
         :class="activeTab === tab.value
-          ? 'bg-primary text-white shadow-xs'
+          ? 'bg-primary text-btn-text-primary shadow-xs'
           : 'text-secondary-text hover:text-primary-text hover:bg-background/50'"
         @click="activeTab = tab.value"
       >

@@ -64,7 +64,7 @@
           :key="tab.value"
           class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
           :class="store.filters.status === tab.value
-            ? 'bg-primary text-white'
+            ? 'bg-primary text-btn-text-primary'
             : 'text-secondary-text hover:text-primary-text'"
           @click="switchTab(tab.value)"
         >
@@ -227,7 +227,7 @@
                 <!-- Add Config -->
                 <button
                   v-if="!g.is_added && hasPermission('group.group_update')"
-                  class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-all active:scale-95 cursor-pointer"
+                  class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-all active:scale-95 cursor-pointer"
                   @click="openAdd(g)"
                 >
                   <Plus class="w-3 h-3" /> Add Config

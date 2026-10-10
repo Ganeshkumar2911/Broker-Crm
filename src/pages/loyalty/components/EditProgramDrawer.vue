@@ -48,7 +48,7 @@
             :key="sec.key"
             type="button"
             class="px-2.5 py-1 rounded-lg text-[11px] font-medium transition cursor-pointer whitespace-nowrap"
-            :class="activeSection === sec.key ? 'bg-primary text-white shadow-xs' : 'text-secondary-text hover:text-primary-text hover:bg-background'"
+            :class="activeSection === sec.key ? 'bg-primary text-btn-text-primary shadow-xs' : 'text-secondary-text hover:text-primary-text hover:bg-background'"
             @click="activeSection = sec.key"
           >
             {{ sec.label }}
@@ -698,7 +698,7 @@
             type="submit"
             form="edit-program-form"
             :disabled="store.actionLoading || (form.deposit_bonus_enabled && depositBonusErrors.hasError)"
-            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 text-xs shadow-xs"
+            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 text-xs shadow-xs"
           >
             <Loader2 v-if="store.actionLoading" class="w-4 h-4 animate-spin" />
             <span>{{ store.actionLoading ? 'Saving...' : 'Save Configuration' }}</span>

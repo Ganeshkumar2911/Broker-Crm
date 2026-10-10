@@ -415,7 +415,7 @@
               <button
                 type="submit"
                 :disabled="isSubmitDisabled"
-                class="px-5 py-2.5 text-xs font-bold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                class="px-5 py-2.5 text-xs font-bold text-btn-text-primary bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Loader2
                   v-if="clientDepthStore.isUploadingDoc"

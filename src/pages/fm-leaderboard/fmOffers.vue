@@ -55,7 +55,7 @@
           </div>
 
           <button
-            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
             @click="openCreateDialog"
           >
             <Plus class="w-3.5 h-3.5" /> New Offer
@@ -79,7 +79,7 @@
         </h2>
         <div class="flex items-center gap-2">
           <button
-            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
             @click="openCreateDialog"
           >
             <Plus class="w-3.5 h-3.5" /> New Offer
@@ -133,7 +133,7 @@
         No subscription offers have been configured for this Fund Manager yet.
       </p>
       <button
-        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
         @click="openCreateDialog"
       >
         <Plus class="w-3.5 h-3.5" /> Create Offer
@@ -246,7 +246,7 @@
                       <Pencil class="w-3.5 h-3.5" />
                     </button>
                     <button
-                      class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+                      class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
                       @click.stop="goToOfferDetails(offer)"
                       title="Manage Links & Agents"
                     >
@@ -304,7 +304,7 @@
               <Pencil class="w-3.5 h-3.5" /> Edit
             </button>
             <button
-              class="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+              class="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
               @click="goToOfferDetails(offer)"
             >
               <Link2 class="w-3.5 h-3.5" /> Manage

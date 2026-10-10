@@ -31,7 +31,7 @@
 
       <!-- Add Action Button -->
       <button
-        class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold shadow-xs transition-all duration-200 cursor-pointer shrink-0"
+        class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold shadow-xs transition-all duration-200 cursor-pointer shrink-0"
         @click="openCreate"
       >
         <Plus class="w-4 h-4" />
@@ -74,7 +74,7 @@
       </button>
       <button
         v-else
-        class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white text-xs font-semibold hover:bg-primary-hover transition-colors cursor-pointer"
+        class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-btn-text-primary text-xs font-semibold hover:bg-primary-hover transition-colors cursor-pointer"
         @click="openCreate"
       >
         <Plus class="w-4 h-4" /> Create First Action

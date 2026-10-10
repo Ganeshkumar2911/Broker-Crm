@@ -101,7 +101,7 @@ const baseBtn = `
           'w-8 h-8 flex items-center justify-center rounded-lg text-xs font-medium',
           'border transition-all duration-150 cursor-pointer select-none',
           p === pagination.page
-            ? 'bg-primary text-white border-primary-border'
+            ? 'bg-primary text-btn-text-primary border-primary-border'
             : 'bg-background text-secondary-text border-primary-border hover:text-primary-text hover:border-primary-border'
         ]"
       >

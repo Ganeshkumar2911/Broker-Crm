@@ -674,7 +674,7 @@ const handleRunGlobalClick = async () => {
             class="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 cursor-pointer group"
             :class="
               expandedSections.master
-                ? 'bg-primary text-white hover:bg-primary-hover shadow-xs scale-105'
+                ? 'bg-primary text-btn-text-primary hover:bg-primary-hover shadow-xs scale-105'
                 : 'bg-background/80 hover:bg-card-background border border-primary-border/70 text-secondary-text hover:text-primary hover:border-primary/40'
             "
             :title="expandedSections.master ? 'Collapse section' : 'Expand features'"
@@ -947,7 +947,7 @@ const handleRunGlobalClick = async () => {
             </span>
             <button
               type="button"
-              class="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
+              class="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
               :disabled="store.actionLoading || !isMasterChanged"
               @click="handleApplyToAllClick"
             >
@@ -996,7 +996,7 @@ const handleRunGlobalClick = async () => {
               class="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 cursor-pointer group"
               :class="
                 expandedSections.individualIb
-                  ? 'bg-primary text-white hover:bg-primary-hover shadow-xs scale-105'
+                  ? 'bg-primary text-btn-text-primary hover:bg-primary-hover shadow-xs scale-105'
                   : 'bg-background/80 hover:bg-card-background border border-primary-border/70 text-secondary-text hover:text-primary hover:border-primary/40'
               "
               :title="expandedSections.individualIb ? 'Collapse section' : 'Expand features'"
@@ -1190,7 +1190,7 @@ const handleRunGlobalClick = async () => {
               <div v-if="canManageSettings" class="flex items-center justify-end pt-2 border-t border-primary-border">
                 <button
                   type="button"
-                  class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   :disabled="store.actionLoading || !isIbChanged"
                   @click="handleSaveIbClick"
                 >
@@ -1247,7 +1247,7 @@ const handleRunGlobalClick = async () => {
               class="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 cursor-pointer group"
               :class="
                 expandedSections.partnerStatus
-                  ? 'bg-primary text-white hover:bg-primary-hover shadow-xs scale-105'
+                  ? 'bg-primary text-btn-text-primary hover:bg-primary-hover shadow-xs scale-105'
                   : 'bg-background/80 hover:bg-card-background border border-primary-border/70 text-secondary-text hover:text-primary hover:border-primary/40'
               "
               :title="expandedSections.partnerStatus ? 'Collapse section' : 'Expand features'"
@@ -1330,7 +1330,7 @@ const handleRunGlobalClick = async () => {
 
                   <button
                     type="button"
-                    class="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50"
+                    class="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50"
                     :disabled="store.runRecalcLoading"
                     @click="handleRunSingleIbClick"
                   >

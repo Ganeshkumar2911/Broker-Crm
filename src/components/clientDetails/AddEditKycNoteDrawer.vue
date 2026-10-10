@@ -79,7 +79,7 @@
               <button
                 type="submit"
                 :disabled="clientDepthStore.isSubmittingReference || !formRemarks.trim()"
-                class="px-5 py-2 text-xs font-semibold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                class="px-5 py-2 text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
               >
                 <Loader2
                   v-if="clientDepthStore.isSubmittingReference"

@@ -701,7 +701,7 @@ onMounted(() => {
           v-if="selectedClientIds.length > 0"
           type="button"
           @click="openBulkClientTagModal"
-          class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-all cursor-pointer shrink-0"
+          class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-all cursor-pointer shrink-0"
         >
           <Tag class="w-3.5 h-3.5" />
           <span>Manage Tags ({{ selectedClientIds.length }})</span>
@@ -772,7 +772,7 @@ onMounted(() => {
       >
         <div class="flex items-center gap-2.5">
           <span
-            class="inline-flex items-center justify-center min-w-5 h-5 px-1.5 rounded-md bg-primary text-white text-[11px] font-bold shadow-xs"
+            class="inline-flex items-center justify-center min-w-5 h-5 px-1.5 rounded-md bg-primary text-btn-text-primary text-[11px] font-bold shadow-xs"
           >
             {{ selectedClientIds.length }}
           </span>
@@ -784,7 +784,7 @@ onMounted(() => {
           <button
             type="button"
             @click="openBulkClientTagModal"
-            class="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold shadow-sm transition-all cursor-pointer"
+            class="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold shadow-sm transition-all cursor-pointer"
           >
             <Tag class="w-3.5 h-3.5" />
             <span>Manage Tags ({{ selectedClientIds.length }})</span>
@@ -823,7 +823,7 @@ onMounted(() => {
         <template #cell-client="{ row }">
           <div class="flex items-center gap-2.5">
             <div
-              class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-[10px] font-medium text-white shrink-0"
+              class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-[10px] font-medium text-btn-text-primary shrink-0"
             >
               {{ row.name?.charAt(0).toUpperCase() }}
             </div>
@@ -1245,7 +1245,7 @@ onMounted(() => {
               />
             </div>
             <div
-              class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-xs font-medium text-white shrink-0"
+              class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-xs font-medium text-btn-text-primary shrink-0"
             >
               {{ client.name?.charAt(0).toUpperCase() }}
             </div>

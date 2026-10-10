@@ -112,7 +112,7 @@
                   !store.customEmail.type
                 "
                 @click="store.sendMailAgain(props.campegin_id)"
-                class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <Loader2
                   v-if="store.isSending"

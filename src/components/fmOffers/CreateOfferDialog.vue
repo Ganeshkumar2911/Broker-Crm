@@ -69,7 +69,7 @@
                   :key="v"
                   type="button"
                   class="px-4 py-1.5 rounded-md text-xs font-semibold capitalize transition-all cursor-pointer"
-                  :class="form.visibility === v ? 'bg-primary text-white shadow-xs' : 'text-secondary-text hover:text-primary-text hover:bg-background/60'"
+                  :class="form.visibility === v ? 'bg-primary text-btn-text-primary shadow-xs' : 'text-secondary-text hover:text-primary-text hover:bg-background/60'"
                   @click="form.visibility = v"
                 >
                   {{ v }}
@@ -184,7 +184,7 @@
           <button
             type="button"
             :disabled="loading || !isValid"
-            class="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-xs"
+            class="px-5 py-2.5 rounded-lg text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-xs"
             @click="submit"
           >
             <Loader2 v-if="loading" class="w-3.5 h-3.5 animate-spin" />

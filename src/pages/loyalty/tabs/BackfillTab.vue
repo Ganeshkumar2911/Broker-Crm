@@ -16,7 +16,7 @@
         <button
           v-if="hasPermission('loyalty.backfill')"
           type="button"
-          class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-all active:scale-95 cursor-pointer shadow-2xs"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-all active:scale-95 cursor-pointer shadow-2xs"
           @click="isStartDrawerOpen = true"
         >
           <Play class="w-3.5 h-3.5" />
@@ -56,7 +56,7 @@
 
       <button
         type="button"
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer text-xs"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer text-xs"
         @click="fetchData"
       >
         <Search class="w-3 h-3" />
@@ -107,7 +107,7 @@
       <button
         v-if="hasPermission('loyalty.backfill')"
         type="button"
-        class="mt-2 flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition cursor-pointer shadow-2xs"
+        class="mt-2 flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition cursor-pointer shadow-2xs"
         @click="isStartDrawerOpen = true"
       >
         <Play class="w-3.5 h-3.5" />

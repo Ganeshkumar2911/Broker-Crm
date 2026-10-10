@@ -130,7 +130,7 @@
           <button
             @click="submit"
             :disabled="loading"
-            class="bg-primary text-white hover:bg-primary-hover transition-colors rounded-lg px-5 py-2.5 font-medium text-sm flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            class="bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors rounded-lg px-5 py-2.5 font-medium text-sm flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Loader2 v-if="loading" class="w-4 h-4 animate-spin" />
             <Save v-else class="w-4 h-4" />

@@ -209,7 +209,7 @@ function handleSave() {
           type="button"
           @click="handleSave"
           :disabled="loading"
-          class="px-5 py-2 rounded-lg text-xs font-medium bg-primary text-white hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-50"
+          class="px-5 py-2 rounded-lg text-xs font-medium bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-50"
         >
           <Loader2 v-if="loading" class="w-3.5 h-3.5 animate-spin" />
           <span>{{ loading ? 'Saving...' : (symbolData ? 'Update Symbol' : 'Add Symbol') }}</span>

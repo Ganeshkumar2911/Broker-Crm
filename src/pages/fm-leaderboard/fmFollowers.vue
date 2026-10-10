@@ -243,7 +243,7 @@
           class="cursor-pointer px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 shrink-0 select-none"
           :class="
             selectedStatus === tab.value
-              ? 'bg-primary text-white shadow-xs'
+              ? 'bg-primary text-btn-text-primary shadow-xs'
               : 'text-secondary-text hover:text-primary-text hover:bg-background/80'
           "
           @click="selectStatus(tab.value)"

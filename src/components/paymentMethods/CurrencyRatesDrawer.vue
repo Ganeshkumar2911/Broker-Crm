@@ -240,7 +240,7 @@
               <!-- Add Rate CTA -->
               <button
                 v-if="hasPermission('payment_methods.create')"
-                class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-medium transition active:scale-95 cursor-pointer shrink-0 shadow-2xs"
+                class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-medium transition active:scale-95 cursor-pointer shrink-0 shadow-2xs"
                 @click="openCreateForm"
               >
                 <Plus class="w-3.5 h-3.5" />
@@ -296,7 +296,7 @@
               </div>
               <button
                 v-if="hasPermission('payment_methods.create') && !searchQuery"
-                class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-medium transition cursor-pointer shadow-xs"
+                class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-medium transition cursor-pointer shadow-xs"
                 @click="openCreateForm"
               >
                 <Plus class="w-3.5 h-3.5" />
@@ -552,7 +552,7 @@
                     class="px-2.5 py-1 rounded-lg text-[11px] font-medium border transition cursor-pointer flex items-center gap-1"
                     :class="
                       formData.currency === preset.code
-                        ? 'bg-primary text-white border-primary'
+                        ? 'bg-primary text-btn-text-primary border-primary'
                         : 'bg-card-background border-primary-border text-primary-text hover:border-primary/40'
                     "
                     @click="applyPreset(preset)"
@@ -834,7 +834,7 @@
             </button>
 
             <button
-              class="flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed shadow-xs"
+              class="flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed shadow-xs"
               :disabled="currencyStore.submitting"
               @click="handleSubmit"
             >

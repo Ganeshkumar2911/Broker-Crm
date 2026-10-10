@@ -10,7 +10,7 @@
         :class="[
           'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer',
           activeTab === tab.id
-            ? 'bg-primary text-white'
+            ? 'bg-primary text-btn-text-primary'
             : 'bg-card-background border border-primary-border text-primary-text hover:border-primary/50'
         ]"
       >
@@ -85,7 +85,7 @@
 
         <button
           v-if="hasPermission('ticket.create')"
-          class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-medium transition-colors xl:flex-none cursor-pointer"
+          class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-medium transition-colors xl:flex-none cursor-pointer"
           @click="dialogOpen = true"
         >
           <Plus class="w-3.5 h-3.5" /> New Ticket
@@ -251,7 +251,7 @@
 
           <button
             v-if="hasPermission('ticket.create')"
-            class="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-medium transition-colors sm:flex-none shrink-0 cursor-pointer shadow-xs"
+            class="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-medium transition-colors sm:flex-none shrink-0 cursor-pointer shadow-xs"
             @click="dialogOpen = true"
           >
             <Plus class="w-3.5 h-3.5" /> Create Ticket

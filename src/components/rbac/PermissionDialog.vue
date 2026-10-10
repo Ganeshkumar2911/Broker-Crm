@@ -204,7 +204,7 @@
               <button
                 type="button"
                 :disabled="store.actionLoading"
-                class="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 shadow-sm disabled:opacity-60 cursor-pointer"
+                class="px-5 py-2.5 rounded-lg text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 shadow-sm disabled:opacity-60 cursor-pointer"
                 @click="save"
               >
                 <Loader2 v-if="store.actionLoading" class="w-3.5 h-3.5 animate-spin" />

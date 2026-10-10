@@ -223,7 +223,7 @@ const formatDate = (val) => {
                 class="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer"
                 :class="[
                   statusFilter === 'closed'
-                    ? 'bg-primary text-white shadow-2xs font-bold'
+                    ? 'bg-primary text-btn-text-primary shadow-2xs font-bold'
                     : 'text-secondary-text hover:text-primary-text hover:bg-card-background/60',
                 ]"
                 @click="

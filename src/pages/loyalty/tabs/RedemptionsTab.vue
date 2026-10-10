@@ -38,7 +38,7 @@
           class="px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer border flex items-center gap-1.5"
           :class="
             filters.status === st.value
-              ? 'bg-primary text-white border-primary shadow-xs font-semibold'
+              ? 'bg-primary text-btn-text-primary border-primary shadow-xs font-semibold'
               : 'bg-card-background text-secondary-text border-primary-border hover:text-primary-text hover:bg-background'
           "
           @click="selectStatus(st.value)"
@@ -91,7 +91,7 @@
 
         <button
           type="button"
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer text-xs"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer text-xs"
           @click="fetchData"
         >
           <Search class="w-3 h-3" />
@@ -278,7 +278,7 @@
                       hasPermission('loyalty_redemption.approve')
                     "
                     type="button"
-                    class="px-2.5 py-1 rounded-lg bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-[11px] transition cursor-pointer"
+                    class="px-2.5 py-1 rounded-lg bg-primary/10 hover:bg-primary text-primary hover:text-btn-text-primary font-semibold text-[11px] transition cursor-pointer"
                     title="Approve Redemption"
                     @click="handleApprove(item)"
                   >

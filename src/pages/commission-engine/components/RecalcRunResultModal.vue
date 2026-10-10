@@ -287,7 +287,7 @@ const navigateToPendingCommissions = () => {
 
             <button
               v-if="!isDryRun && entriesCreated > 0"
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold shadow-xs transition-colors"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold shadow-xs transition-colors"
               @click="navigateToPendingCommissions"
             >
               <span>View Pending Commissions</span>

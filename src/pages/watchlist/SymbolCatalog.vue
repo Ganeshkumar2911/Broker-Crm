@@ -131,7 +131,7 @@ function resetFilters() {
         <button
           v-if="hasPermission('watchlist.symbols_create')"
           type="button"
-          class="px-4 py-2 rounded-xl text-xs font-semibold bg-primary text-white hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer shadow-xs"
+          class="px-4 py-2 rounded-xl text-xs font-semibold bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer shadow-xs"
           @click="openCreateModal"
         >
           <Plus class="w-3.5 h-3.5" />
@@ -285,7 +285,7 @@ function resetFilters() {
                   </p>
                   <button
                     type="button"
-                    class="mt-4 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer"
+                    class="mt-4 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer"
                     @click="openCreateModal"
                   >
                     + Add Symbol

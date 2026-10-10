@@ -17,7 +17,7 @@
         </button>
         <button
           v-if="hasPermission('email.template_update')"
-          class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+          class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
           @click="openCreate"
         >
           <Plus class="w-3.5 h-3.5" /> Create Template
@@ -93,7 +93,7 @@
       </div>
       <button
         v-if="hasPermission('email.template_update')"
-        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
         @click="openCreate"
       >
         <Plus class="w-3.5 h-3.5" /> Create Template
@@ -150,7 +150,7 @@
           </button>
           <button
             v-if="hasPermission('email.template_update')"
-            class="flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+            class="flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
             @click="openEdit(tpl)"
           >
             <Pencil class="w-3.5 h-3.5" /> Edit

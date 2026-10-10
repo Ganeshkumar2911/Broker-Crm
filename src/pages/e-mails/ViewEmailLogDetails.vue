@@ -54,7 +54,7 @@
               class="px-3 py-1.5 rounded-md text-xs font-medium transition-colors flex items-center gap-1.5 cursor-pointer"
               :class="
                 activeTab === 'timeline'
-                  ? 'bg-primary text-white font-semibold'
+                  ? 'bg-primary text-btn-text-primary font-semibold'
                   : 'text-secondary-text hover:text-primary-text'
               "
             >
@@ -67,7 +67,7 @@
               class="px-3 py-1.5 rounded-md text-xs font-medium transition-colors flex items-center gap-1.5 cursor-pointer"
               :class="
                 activeTab === 'preview'
-                  ? 'bg-primary text-white font-semibold'
+                  ? 'bg-primary text-btn-text-primary font-semibold'
                   : 'text-secondary-text hover:text-primary-text'
               "
             >

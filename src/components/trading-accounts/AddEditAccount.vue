@@ -101,7 +101,7 @@
                   @click="changeEnv('demo')"
                   type="button"
                   class="py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer flex items-center justify-center gap-1.5"
-                  :class="selectedEnv === 'demo' ? 'bg-primary text-white shadow-sm' : 'text-secondary-text hover:text-primary-text'"
+                  :class="selectedEnv === 'demo' ? 'bg-primary text-btn-text-primary shadow-sm' : 'text-secondary-text hover:text-primary-text'"
                 >
                   <span class="w-1.5 h-1.5 rounded-full animate-pulse" :class="selectedEnv === 'demo' ? 'bg-black' : 'bg-secondary-text'" />
                   Demo Account
@@ -110,7 +110,7 @@
                   @click="changeEnv('live')"
                   type="button"
                   class="py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer flex items-center justify-center gap-1.5"
-                  :class="selectedEnv === 'live' ? 'bg-primary text-white shadow-sm' : 'text-secondary-text hover:text-primary-text'"
+                  :class="selectedEnv === 'live' ? 'bg-primary text-btn-text-primary shadow-sm' : 'text-secondary-text hover:text-primary-text'"
                 >
                   <span class="w-1.5 h-1.5 rounded-full" :class="selectedEnv === 'live' ? 'bg-primary-green' : 'bg-secondary-text'" />
                   Live Account
@@ -258,7 +258,7 @@
           <button
             v-if="mode === 'copy_trading'"
             :disabled="isLoading || !copyForm.currency || (!isEdit && !selectedClientId)"
-            class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+            class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
             @click="submitCopyTrading"
           >
             <Loader2 v-if="isLoading" class="w-3.5 h-3.5 animate-spin" />
@@ -268,7 +268,7 @@
           <button
             v-if="mode === 'real'"
             :disabled="isLoading || !!passwordError || !mt5Password || (selectedEnv === 'demo' && (!mt5Balance)) || !selectedClientId"
-            class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+            class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
             @click="submitMT5"
           >
             <Loader2 v-if="isLoading" class="w-3.5 h-3.5 animate-spin" />

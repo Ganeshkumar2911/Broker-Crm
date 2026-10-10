@@ -82,7 +82,7 @@
 
           <button
             type="button"
-            class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all active:scale-[0.98] cursor-pointer shadow-sm"
+            class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all active:scale-[0.98] cursor-pointer shadow-sm"
             @click="panel = { open: true, editData: null }"
           >
             <Upload class="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@
               class="px-2.5 py-1 text-[11px] font-semibold capitalize rounded-md transition-all cursor-pointer"
               :class="
                 statusFilter === status
-                  ? 'bg-primary text-white font-bold'
+                  ? 'bg-primary text-btn-text-primary font-bold'
                   : 'text-secondary-text hover:text-primary-text'
               "
               @click="statusFilter = status"
@@ -151,7 +151,7 @@
               class="p-1 rounded-md transition-all cursor-pointer"
               :class="
                 viewMode === 'grid'
-                  ? 'bg-primary text-white'
+                  ? 'bg-primary text-btn-text-primary'
                   : 'text-secondary-text hover:text-primary-text'
               "
               @click="viewMode = 'grid'"
@@ -164,7 +164,7 @@
               class="p-1 rounded-md transition-all cursor-pointer"
               :class="
                 viewMode === 'list'
-                  ? 'bg-primary text-white'
+                  ? 'bg-primary text-btn-text-primary'
                   : 'text-secondary-text hover:text-primary-text'
               "
               @click="viewMode = 'list'"
@@ -226,7 +226,7 @@
       <button
         v-if="!searchQuery && statusFilter === 'all'"
         type="button"
-        class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all cursor-pointer"
+        class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all cursor-pointer"
         @click="panel = { open: true, editData: null }"
       >
         <Upload class="w-4 h-4" />

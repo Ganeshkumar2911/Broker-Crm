@@ -30,7 +30,7 @@
             :key="filter.value"
             class="px-2.5 py-1 rounded-md font-medium transition cursor-pointer"
             :class="store.filters.method_type === filter.value
-              ? 'bg-primary text-white font-semibold shadow-2xs'
+              ? 'bg-primary text-btn-text-primary font-semibold shadow-2xs'
               : 'text-secondary-text hover:text-primary-text'"
             @click="onMethodTypeChange(filter.value)"
           >
@@ -60,7 +60,7 @@
 
         <button
           v-if="hasPermission('payment_methods.create')"
-          class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-all active:scale-95 cursor-pointer shadow-xs"
+          class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-all active:scale-95 cursor-pointer shadow-xs"
           @click="handleOpenCreate"
         >
           <Plus class="w-3.5 h-3.5" />
@@ -103,7 +103,7 @@
       </div>
       <button
         v-if="hasPermission('payment_methods.create')"
-        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition cursor-pointer shadow-xs"
+        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition cursor-pointer shadow-xs"
         @click="handleOpenCreate"
       >
         <Plus class="w-3.5 h-3.5" />

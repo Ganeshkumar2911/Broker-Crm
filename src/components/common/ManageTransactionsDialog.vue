@@ -47,7 +47,7 @@
         >
           <div class="flex items-center gap-3 min-w-0">
             <div
-              class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-xs font-semibold text-white shrink-0"
+              class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-xs font-semibold text-btn-text-primary shrink-0"
             >
               <Wallet v-if="isAccountMode" class="w-4 h-4" />
               <span v-else>{{ initialLetter }}</span>
@@ -369,7 +369,7 @@
         </button>
         <button
           :disabled="!hasChanges || isSubmitting"
-          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm"
+          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm"
           @click="handleSubmit"
         >
           <Loader2 v-if="isSubmitting" class="w-3.5 h-3.5 animate-spin" />

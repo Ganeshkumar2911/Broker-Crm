@@ -389,7 +389,7 @@
           </button>
           <button
             type="button"
-            class="flex-1 rounded-lg bg-primary px-4 py-2.5 text-xs font-semibold text-white transition-all hover:bg-primary-hover active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2 cursor-pointer"
+            class="flex-1 rounded-lg bg-primary px-4 py-2.5 text-xs font-semibold text-btn-text-primary transition-all hover:bg-primary-hover active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2 cursor-pointer"
             :disabled="
               changeGroupStore.submitting ||
               !selectedGroupObj?.group ||

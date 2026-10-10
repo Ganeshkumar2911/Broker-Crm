@@ -105,7 +105,7 @@
         </button>
         <button
           :disabled="staffStore.actionLoading || !isValid"
-          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm"
+          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm"
           @click="submit"
         >
           <Loader2 v-if="staffStore.actionLoading" class="w-3.5 h-3.5 animate-spin" />

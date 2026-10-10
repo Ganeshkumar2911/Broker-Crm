@@ -585,7 +585,7 @@ const getWalletTargetMasterBadge = (state) => {
         <button
           v-if="canManageSettings"
           type="button"
-          class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50"
+          class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer disabled:opacity-50"
           :disabled="eligibilityLoading"
           @click="handleSaveEligibility"
         >
@@ -1094,7 +1094,7 @@ const getWalletTargetMasterBadge = (state) => {
           <div v-if="canManageSettings" class="flex items-center justify-end pt-2 border-t border-primary-border">
             <button
               type="button"
-              class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-hover  transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover  transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               :disabled="store.actionLoading"
               @click="handleSaveIb"
             >

@@ -124,7 +124,7 @@
               <button
                 type="button"
                 @click="closeDrawer"
-                class="px-5 py-2 text-xs font-semibold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition-colors cursor-pointer"
+                class="px-5 py-2 text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover rounded-xl shadow-xs transition-colors cursor-pointer"
               >
                 Close
               </button>

@@ -3,13 +3,12 @@ import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   Menu,
-  Sun,
-  Moon,
   ChevronLeft,
 } from 'lucide-vue-next'
 import { useProfileStore } from '@/stores/profile/profile'
 import ProfileDialog from '@/components/common/profileDialog.vue'
 import TopBarNotifications from '@/components/notifications/TopBarNotifications.vue'
+import ThemeSelector from '@/components/common/ThemeSelector.vue'
 
 defineEmits(['toggle-sidebar'])
 
@@ -17,24 +16,10 @@ const router = useRouter()
 const route = useRoute()
 const profileStore = useProfileStore()
 
-const isDark = ref(false)
 const profileDialogOpen = ref(false)
 
 onMounted(() => {
-  isDark.value = document.documentElement.classList.contains('dark')
 })
-
-function toggleDark() {
-  isDark.value = !isDark.value
-
-  if (isDark.value) {
-    document.documentElement.classList.add('dark')
-    localStorage.setItem('theme', 'dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-    localStorage.setItem('theme', 'light')
-  }
-}
 
 function openProfileDialog() {
   profileDialogOpen.value = true
@@ -87,15 +72,8 @@ function closeProfileDialog() {
       <!-- Notification Bell Popover & Drawer -->
       <TopBarNotifications />
 
-      <!-- Theme Toggle -->
-      <button
-        @click="toggleDark"
-        class="w-8 h-8 flex items-center justify-center rounded-lg
-               text-secondary-text hover:bg-primary-border hover:cursor-pointer"
-      >
-        <Sun v-if="isDark" class="w-4 h-4" />
-        <Moon v-else class="w-4 h-4" />
-      </button>
+      <!-- Theme Selector -->
+      <ThemeSelector />
 
       <!-- Avatar -->
       <div

@@ -306,7 +306,7 @@
                     class="w-4 h-4 rounded-full flex items-center justify-center border"
                     :class="
                       form.trading_account_id === acc.trading_account_id
-                        ? 'border-primary bg-primary text-white'
+                        ? 'border-primary bg-primary text-btn-text-primary'
                         : 'border-secondary-text/50 bg-transparent'
                     "
                   >

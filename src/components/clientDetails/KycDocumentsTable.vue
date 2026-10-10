@@ -35,7 +35,7 @@
         <button
           type="button"
           @click="openAddDrawer('document')"
-          class="bg-primary hover:bg-primary-hover text-white rounded-lg px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-2xs transition-all"
+          class="bg-primary hover:bg-primary-hover text-btn-text-primary rounded-lg px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-2xs transition-all"
         >
           <Upload class="w-3.5 h-3.5" />
           Upload Document

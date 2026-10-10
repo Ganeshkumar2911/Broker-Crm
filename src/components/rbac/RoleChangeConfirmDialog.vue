@@ -64,7 +64,7 @@ const emit = defineEmits(['close', 'confirm'])
         <button
           type="button"
           :disabled="loading"
-          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer shadow-sm"
+          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer shadow-sm"
           @click="emit('confirm')"
         >
           <Loader2 v-if="loading" class="w-3.5 h-3.5 animate-spin" />

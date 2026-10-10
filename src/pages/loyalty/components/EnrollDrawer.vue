@@ -351,7 +351,7 @@
             type="submit"
             form="enroll-form"
             :disabled="store.actionLoading || !form.user_id || !form.trading_account_id || !form.program_id"
-            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-xs shadow-xs"
+            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-xs shadow-xs"
           >
             <HugeIcon v-if="store.actionLoading" :icon="Loading03Icon" :size="16" class="animate-spin" />
             <span>{{ store.actionLoading ? 'Enrolling...' : 'Enroll Account' }}</span>

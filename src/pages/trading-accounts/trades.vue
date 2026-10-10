@@ -22,7 +22,7 @@
           Broker
         </p>
         <span
-          class="text-[10px] font-bold px-2 py-0.5 rounded bg-primary text-white"
+          class="text-[10px] font-bold px-2 py-0.5 rounded bg-primary text-btn-text-primary"
           >{{ activeAccount.broker }}</span
         >
       </div>

@@ -99,7 +99,7 @@
               type="submit"
               form="fulfill-form"
               :disabled="store.actionLoading"
-              class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer disabled:opacity-50 flex items-center gap-1.5 text-xs shadow-xs"
+              class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer disabled:opacity-50 flex items-center gap-1.5 text-xs shadow-xs"
             >
               <Loader2 v-if="store.actionLoading" class="w-3.5 h-3.5 animate-spin" />
               <span>Confirm & Fulfill</span>

@@ -27,7 +27,7 @@
           v-if="hasPermission('blog.create')"
           type="button"
           @click="openCreateModal"
-          class="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all cursor-pointer shadow-xs"
+          class="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold transition-all cursor-pointer shadow-xs"
         >
           <Plus class="w-4 h-4" />
           <span>New Article</span>
@@ -365,7 +365,7 @@
                   type="file"
                   @change="handleFileChange"
                   accept="image/png,image/jpeg,image/jpg,image/gif,image/webp,image/svg+xml"
-                  class="w-full bg-background border border-primary-border rounded-xl px-3 py-1.5 text-xs text-secondary-text focus:outline-none focus:border-primary file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:text-xs file:bg-primary file:text-white file:font-bold cursor-pointer"
+                  class="w-full bg-background border border-primary-border rounded-xl px-3 py-1.5 text-xs text-secondary-text focus:outline-none focus:border-primary file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:text-xs file:bg-primary file:text-btn-text-primary file:font-bold cursor-pointer"
                 />
               </div>
 
@@ -465,7 +465,7 @@
             type="button"
             @click="handleSaveBlog"
             :disabled="store.actionLoading"
-            class="bg-primary hover:bg-primary-hover text-white font-bold px-5 py-2 rounded-xl text-xs cursor-pointer transition-colors shadow-xs flex items-center gap-2"
+            class="bg-primary hover:bg-primary-hover text-btn-text-primary font-bold px-5 py-2 rounded-xl text-xs cursor-pointer transition-colors shadow-xs flex items-center gap-2"
           >
             <RotateCw v-if="store.actionLoading" class="w-3.5 h-3.5 animate-spin" />
             <span>{{ isEditing ? 'Update Article' : 'Publish Article' }}</span>

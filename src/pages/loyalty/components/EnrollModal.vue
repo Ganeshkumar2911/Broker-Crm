@@ -135,7 +135,7 @@
           type="submit"
           form="enroll-modal-form"
           :disabled="store.actionLoading || !form.user_id || !form.trading_account_id || !form.program_id"
-          class="flex items-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed text-xs"
+          class="flex items-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed text-xs"
         >
           <HugeIcon v-if="store.actionLoading" :icon="Loading03Icon" :size="14" class="animate-spin" />
           <span>{{ store.actionLoading ? 'Enrolling...' : 'Enroll Account' }}</span>

@@ -84,7 +84,7 @@
         </button>
         <button
           type="button"
-          class="px-4 py-2 text-sm font-medium bg-primary text-white rounded-lg hover:bg-primary-hover flex items-center gap-2 cursor-pointer"
+          class="px-4 py-2 text-sm font-medium bg-primary text-btn-text-primary rounded-lg hover:bg-primary-hover flex items-center gap-2 cursor-pointer"
           @click="handleSubmit"
           :disabled="store.actionLoading"
         >

@@ -180,7 +180,7 @@ function handleReset() {
         <button
           type="button"
           :disabled="store.settingsSaving"
-          class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-primary text-white hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-50 shadow-xs"
+          class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-50 shadow-xs"
           @click="handleSave"
         >
           <Loader2 v-if="store.settingsSaving" class="w-4 h-4 animate-spin" />

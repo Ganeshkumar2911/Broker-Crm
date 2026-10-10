@@ -304,7 +304,7 @@
             type="submit"
             form="reward-form"
             :disabled="store.actionLoading || !form.name.trim() || !form.points_required"
-            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold transition cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 text-xs shadow-xs"
+            class="flex-1 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold transition cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 text-xs shadow-xs"
           >
             <HugeIcon v-if="store.actionLoading" :icon="Loading03Icon" :size="16" class="animate-spin" />
             <span>{{ isEditing ? 'Save Product' : 'Publish Product' }}</span>

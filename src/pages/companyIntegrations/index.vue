@@ -12,7 +12,7 @@
 
       <button
         v-if="hasPermission('company_integration.create')"
-        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-all active:scale-95 cursor-pointer"
+        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-all active:scale-95 cursor-pointer"
         @click="handleOpenCreate"
       >
         <Plus class="w-3.5 h-3.5" />

@@ -231,7 +231,7 @@
         </button>
         <button
           type="button"
-          class="flex-1 flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-semibold text-white bg-primary hover:bg-primary-hover transition-colors disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer shadow-sm"
+          class="flex-1 flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-semibold text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer shadow-sm"
           :disabled="isSubmitting || !canSubmit"
           @click="handleSubmit"
         >

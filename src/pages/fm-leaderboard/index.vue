@@ -109,7 +109,7 @@
               class="w-7 h-7 flex items-center justify-center rounded-md text-xs transition-colors cursor-pointer"
               :class="
                 layoutMode === 'grid'
-                  ? 'bg-primary text-white font-medium'
+                  ? 'bg-primary text-btn-text-primary font-medium'
                   : 'text-secondary-text hover:text-primary-text'
               "
             >
@@ -123,7 +123,7 @@
               class="w-7 h-7 flex items-center justify-center rounded-md text-xs transition-colors cursor-pointer"
               :class="
                 layoutMode === 'list'
-                  ? 'bg-primary text-white font-medium'
+                  ? 'bg-primary text-btn-text-primary font-medium'
                   : 'text-secondary-text hover:text-primary-text'
               "
             >
@@ -207,7 +207,7 @@
         <button
           v-else-if="hasPermission('fund_manager.create')"
           @click="handleAdd"
-          class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-xs font-medium text-white shadow cursor-pointer hover:bg-primary-hover transition-colors"
+          class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-xs font-medium text-btn-text-primary shadow cursor-pointer hover:bg-primary-hover transition-colors"
         >
           <Plus class="mr-1.5 h-4 w-4" />
           Add Fund Manager

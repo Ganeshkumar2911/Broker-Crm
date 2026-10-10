@@ -51,7 +51,7 @@
           </div>
           
           <div class="flex items-center gap-3 shrink-0">
-            <button class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer" @click="isEditModalOpen = true">
+            <button class="px-4 py-2 bg-primary text-btn-text-primary text-sm font-medium rounded-lg hover:bg-primary-hover transition-colors flex items-center gap-2 cursor-pointer" @click="isEditModalOpen = true">
               <HugeIcon :icon="PencilEdit01Icon" :size="16" />
               Edit Settings
             </button>
@@ -129,7 +129,7 @@
               <span class="text-xs font-semibold text-secondary-text tracking-wide w-24 leading-tight">MIN REDEMPTION THRESHOLD</span>
               <div class="flex items-center gap-1.5">
                 <HugeIcon :icon="HelpCircleIcon" :size="14" class="text-secondary-text cursor-pointer" />
-                <div class="bg-primary text-white px-2 py-1 rounded-lg font-bold text-sm">
+                <div class="bg-primary text-btn-text-primary px-2 py-1 rounded-lg font-bold text-sm">
                   {{ formatCurrencyStr(store.activeProgram.min_redemption_amount) }} {{ store.activeProgram.currency }}
                 </div>
               </div>

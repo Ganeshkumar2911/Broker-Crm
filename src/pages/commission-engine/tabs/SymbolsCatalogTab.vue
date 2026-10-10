@@ -278,7 +278,7 @@ const handleAssignedCallback = () => {
                 class="px-3 py-1 text-xs font-semibold rounded-lg transition-colors cursor-pointer"
                 :class="[
                   unmappedFilter === 'unmapped'
-                    ? 'bg-primary text-white font-bold'
+                    ? 'bg-primary text-btn-text-primary font-bold'
                     : 'text-secondary-text hover:text-primary-text'
                 ]"
                 @click="setUnmappedFilter('unmapped')"
@@ -308,7 +308,7 @@ const handleAssignedCallback = () => {
             <button
               v-if="canManage && selectedSymbols.length > 0"
               type="button"
-              class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary hover:bg-primary-hover text-white text-xs font-bold rounded-lg transition-colors cursor-pointer shadow-2xs"
+              class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-bold rounded-lg transition-colors cursor-pointer shadow-2xs"
               @click="openBulkAssign()"
             >
               <HugeIcon :icon="Tag01Icon" :size="14" />

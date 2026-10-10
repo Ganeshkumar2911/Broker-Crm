@@ -12,7 +12,7 @@
       />
       <button
         v-if="hasPermission('group.group_update')"
-        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors cursor-pointer"
+        class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition-colors cursor-pointer"
         @click="dialogOpen = true"
       >
         <FolderPlus class="w-3.5 h-3.5" /> Create Category

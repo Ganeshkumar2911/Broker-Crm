@@ -204,7 +204,7 @@
           class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
           :class="
             activeTab === tab.key
-              ? 'bg-primary text-white'
+              ? 'bg-primary text-btn-text-primary'
               : 'text-secondary-text hover:bg-background hover:text-primary-text'
           "
         >
@@ -350,7 +350,7 @@
               class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
               :class="
                 isTabActive(tab)
-                  ? 'bg-primary text-white shadow-xs'
+                  ? 'bg-primary text-btn-text-primary shadow-xs'
                   : 'text-secondary-text hover:bg-card-background hover:text-primary-text'
               "
             >

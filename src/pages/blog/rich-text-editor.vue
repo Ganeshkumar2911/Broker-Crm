@@ -218,7 +218,7 @@
           <button
             type="button"
             @click="confirmInsertLink"
-            class="bg-primary hover:bg-primary-hover text-white font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer transition-colors"
+            class="bg-primary hover:bg-primary-hover text-btn-text-primary font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer transition-colors"
           >
             Insert Link
           </button>
@@ -268,7 +268,7 @@
           <button
             type="button"
             @click="confirmInsertImage"
-            class="bg-primary hover:bg-primary-hover text-white font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer transition-colors"
+            class="bg-primary hover:bg-primary-hover text-btn-text-primary font-bold px-4 py-1.5 rounded-xl text-xs cursor-pointer transition-colors"
           >
             Insert Image
           </button>

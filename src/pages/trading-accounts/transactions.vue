@@ -25,7 +25,7 @@
       </div>
       <div>
         <p class="text-[10px] uppercase tracking-widest text-secondary-text mb-1 font-semibold">Broker</p>
-        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-primary text-white">{{ activeAccount.broker }}</span>
+        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-primary text-btn-text-primary">{{ activeAccount.broker }}</span>
       </div>
       <div>
         <p class="text-[10px] uppercase tracking-widest text-secondary-text mb-1 font-semibold">Type</p>
@@ -272,7 +272,7 @@ const formatMoney = (amount) => {
 const formatType = (t) => t?.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) ?? '—'
 
 const typeClass = (type) => ({
-  trade_pnl: 'bg-primary text-white',
+  trade_pnl: 'bg-primary text-btn-text-primary',
   fee_paid:  'bg-primary-yellow text-white',
   deposit:   'bg-primary-green text-white',
   withdrawal:'bg-primary-red text-white',

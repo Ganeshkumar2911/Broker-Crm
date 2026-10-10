@@ -982,7 +982,7 @@
           <button
             @click="handleSubmit"
             :disabled="store.isSubmitting"
-            class="flex-1 px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-hover transition-all cursor-pointer shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            class="flex-1 px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 bg-primary text-btn-text-primary hover:bg-primary-hover transition-all cursor-pointer shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Loader2 v-if="store.isSubmitting" class="w-4 h-4 animate-spin" />
             <span v-else>{{

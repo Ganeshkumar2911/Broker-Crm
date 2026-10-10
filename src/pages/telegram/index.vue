@@ -67,7 +67,7 @@ const activeComponent = computed(() => {
         class="px-4 py-2 rounded-md text-xs font-medium transition-colors cursor-pointer"
         :class="
           activeTab === tab.value
-            ? 'bg-primary text-white'
+            ? 'bg-primary text-btn-text-primary'
             : 'text-secondary-text hover:text-primary-text'
         "
         @click="activeTab = tab.value"

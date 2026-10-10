@@ -41,7 +41,7 @@
                 v-for="t in ['demo', 'live']"
                 :key="t"
                 class="px-4 py-1.5 rounded-md text-xs font-medium capitalize transition-colors"
-                :class="form.account_type === t ? 'bg-primary text-white' : 'text-secondary-text hover:text-primary-text'"
+                :class="form.account_type === t ? 'bg-primary text-btn-text-primary' : 'text-secondary-text hover:text-primary-text'"
                 @click="form.account_type = t"
               >
                 {{ t }}
@@ -141,7 +141,7 @@
         >Cancel</button>
         <button
           :disabled="store.createLoading || !isValid"
-          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-white bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+          class="flex-1 px-4 py-2.5 rounded-lg text-xs font-medium text-btn-text-primary bg-primary hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
           @click="submit"
         >
           <Loader2 v-if="store.createLoading" class="w-3.5 h-3.5 animate-spin" />

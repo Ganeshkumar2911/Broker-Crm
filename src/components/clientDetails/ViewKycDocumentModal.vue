@@ -70,7 +70,7 @@
                   class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer"
                   :class="
                     activeSide === 'front'
-                      ? 'bg-primary text-white shadow-xs'
+                      ? 'bg-primary text-btn-text-primary shadow-xs'
                       : 'text-secondary-text hover:text-primary-text'
                   "
                 >
@@ -82,7 +82,7 @@
                   class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1"
                   :class="
                     activeSide === 'back'
-                      ? 'bg-primary text-white shadow-xs'
+                      ? 'bg-primary text-btn-text-primary shadow-xs'
                       : 'text-secondary-text hover:text-primary-text'
                   "
                 >

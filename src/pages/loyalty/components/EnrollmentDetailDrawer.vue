@@ -164,7 +164,7 @@
                 <button
                   v-if="hasPermission('loyalty.update')"
                   type="button"
-                  class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition cursor-pointer shadow-xs"
+                  class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary text-xs font-semibold transition cursor-pointer shadow-xs"
                   @click="$emit('creditRequested', detail)"
                 >
                   <HugeIcon :icon="Coins01Icon" :size="13" />
@@ -330,7 +330,7 @@
                     newTradingAccountId === detail.trading_account_id ||
                     store.actionLoading
                   "
-                  class="px-3 py-1 rounded-lg bg-primary hover:bg-primary-hover text-white font-semibold text-xs disabled:opacity-50 flex items-center gap-1 cursor-pointer"
+                  class="px-3 py-1 rounded-lg bg-primary hover:bg-primary-hover text-btn-text-primary font-semibold text-xs disabled:opacity-50 flex items-center gap-1 cursor-pointer"
                   @click="handleUpdateAccount"
                 >
                   <HugeIcon

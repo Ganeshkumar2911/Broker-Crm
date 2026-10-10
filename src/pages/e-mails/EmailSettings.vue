@@ -28,7 +28,7 @@
         <button
           v-if="hasPermission('email.update')"
           @click="openDialog"
-          class="bg-primary text-white hover:bg-primary-hover transition-colors rounded-lg px-4 py-2 text-sm font-medium flex items-center justify-center gap-2 mt-2 cursor-pointer"
+          class="bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors rounded-lg px-4 py-2 text-sm font-medium flex items-center justify-center gap-2 mt-2 cursor-pointer"
         >
           <Settings class="w-4 h-4 text-white" />
           Configure Email Settings
@@ -96,7 +96,7 @@
             <button
               v-if="hasPermission('email.update')"
               @click="openDialog"
-              class="border border-primary-border bg-primary text-white transition-colors rounded-lg px-4 py-2 text-sm font-medium flex items-center gap-2 cursor-pointer"
+              class="border border-primary-border bg-primary text-btn-text-primary transition-colors rounded-lg px-4 py-2 text-sm font-medium flex items-center gap-2 cursor-pointer"
             >
               <Pencil class="w-4 h-4 text-white" />
               Edit Settings

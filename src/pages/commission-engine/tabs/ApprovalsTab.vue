@@ -32,7 +32,7 @@
               class="px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer"
               :class="[
                 activeFrequency === freq.value
-                  ? 'bg-primary text-white  font-bold'
+                  ? 'bg-primary text-btn-text-primary  font-bold'
                   : 'text-secondary-text hover:text-primary-text hover:bg-card-background/60',
               ]"
               @click="handleFrequencyChange(freq.value)"

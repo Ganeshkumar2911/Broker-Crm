@@ -67,7 +67,7 @@
         <button
           v-if="fmIdInput && String(fmIdInput) !== String(store.filters.fm_id)"
           @click="handleApplyFmFilter"
-          class="px-3 py-2 rounded-lg bg-primary text-white text-xs font-medium hover:bg-primary-hover transition-colors cursor-pointer"
+          class="px-3 py-2 rounded-lg bg-primary text-btn-text-primary text-xs font-medium hover:bg-primary-hover transition-colors cursor-pointer"
         >
           Apply
         </button>
@@ -79,7 +79,7 @@
             :key="v.key"
             :disabled="store.loading"
             class="px-3 h-full text-xs font-medium transition-colors cursor-pointer disabled:opacity-50"
-            :class="store.filters.amount_view === v.key ? 'bg-primary text-white' : 'text-secondary-text hover:text-primary-text hover:bg-background'"
+            :class="store.filters.amount_view === v.key ? 'bg-primary text-btn-text-primary' : 'text-secondary-text hover:text-primary-text hover:bg-background'"
             :title="v.description"
             @click="store.setAmountView(v.key)"
           >
@@ -175,7 +175,7 @@
                   <p class="text-xs text-secondary-text">Try adjusting your filters or search criteria</p>
                   <button
                     v-if="store.filters.fm_id"
-                    class="mt-2 px-3 py-1.5 text-xs font-medium rounded-lg bg-primary text-white hover:bg-primary-hover transition-colors cursor-pointer"
+                    class="mt-2 px-3 py-1.5 text-xs font-medium rounded-lg bg-primary text-btn-text-primary hover:bg-primary-hover transition-colors cursor-pointer"
                     @click="clearFmFilter"
                   >
                     Clear FM Filter
