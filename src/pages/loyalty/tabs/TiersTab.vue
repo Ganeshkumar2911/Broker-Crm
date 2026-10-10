@@ -301,7 +301,7 @@ import { ref, computed, watch, onMounted } from "vue";
 import { Award, Plus, RefreshCw, Layers, Pencil } from "lucide-vue-next";
 import { useLoyaltyStore } from "@/stores/loyalty/loyalty";
 import { usePermissionCheck } from "@/composables/usePermissionCheck";
-import logoIcon from "@/assets/panther-fav.svg";
+
 import TierDrawer from "../components/TierDrawer.vue";
 
 const store = useLoyaltyStore();
