@@ -48,12 +48,10 @@ window.addEventListener('vite:preloadError', (event) => {
 })
 
 async function enableMocking() {
-  if (import.meta.env.DEV) {
-    const { worker } = await import('./mocks/browser')
-    return worker.start({
-      onUnhandledRequest: 'bypass', // Don't warn on unhandled requests (like static assets)
-    })
-  }
+  const { worker } = await import('./mocks/browser')
+  return worker.start({
+    onUnhandledRequest: 'bypass', // Don't warn on unhandled requests (like static assets)
+  })
 }
 
 enableMocking().then(() => {
