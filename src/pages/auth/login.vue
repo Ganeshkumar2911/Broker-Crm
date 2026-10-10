@@ -7,7 +7,7 @@ import authToken from '@/common/authToken'
 import urls from '@/api/urls'
 import { useRouter } from 'vue-router'
 import { useMyPermissionsStore } from '@/stores/rbac/myPermissions'
-import logoLight from '@/assets/logo_full.svg'
+import logoLight from '@/assets/logo_full.png'
 // import logoDark from '@/assets/logo_dark_full.png'
 import bgImage from '@/assets/Login-img.jpeg'
 
@@ -187,8 +187,8 @@ const goToRegister = () => {
         <div class="text-center mb-8">
           <div class="flex justify-center mb-6">
             <img
-              src="/logo_full.svg"
-              alt="Panther Capitals"
+              src="/logo_full.png"
+              alt="Tech4broker"
               class="h-12 object-contain"
             />
           </div>
@@ -319,7 +319,7 @@ const goToRegister = () => {
           <p
             class="mt-6 text-center text-[11px] leading-5 text-white/40"
           >
-            Panther Capitals Ltd we don't offer services to residents of
+            Tech4broker we don't offer services to residents of
             certain countries, including: Syria, North Korea, Iran, Iraq,
             Mauritius, USA, Canada, Sudan, Myanmar, Yemen, Afghanistan,
             Vanuatu, and those within the European Economic Area (EEA).

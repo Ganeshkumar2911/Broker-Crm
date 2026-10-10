@@ -59,7 +59,7 @@ export const authHandlers = [
       data: {
         id: 'user-123',
         name: 'Admin User',
-        email: 'admin@panthercapital.com',
+        email: 'admin@t4bcapital.com',
         role: 'Super Admin'
       }
     })

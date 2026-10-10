@@ -41,5 +41,5 @@ for (const [endpoint, result] of Object.entries(dump)) {
 
 handlersCode += `];\n`;
 
-fs.writeFileSync('/Users/apple/Desktop/panther-capital-admin-frontend/src/mocks/handlers/generated.js', handlersCode);
+fs.writeFileSync('/Users/apple/Desktop/t4b-capital-admin-frontend/src/mocks/handlers/generated.js', handlersCode);
 console.log(`Generated mocks for ${addedCount} successful endpoints!`);

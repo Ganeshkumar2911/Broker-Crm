@@ -110,7 +110,7 @@
                 <input
                   v-model="form.name"
                   type="text"
-                  placeholder="e.g. Amazon Gift Card $25 or Panther Merchandise Hoodie"
+                  placeholder="e.g. Amazon Gift Card $25 or T4B Merchandise Hoodie"
                   required
                   class="w-full px-3 py-2 bg-background border border-primary-border rounded-lg text-primary-text outline-none focus:border-primary transition"
                 />

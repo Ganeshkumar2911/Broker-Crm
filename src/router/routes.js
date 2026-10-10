@@ -757,7 +757,7 @@ const routes = [
           requiresAuth: true,
           title: "Loyalty Program",
           description:
-            "Manage PantherTrade loyalty program rules, tiers, rewards, enrollments, and MT5 history backfills.",
+            "Manage Tech4broker loyalty program rules, tiers, rewards, enrollments, and MT5 history backfills.",
         },
       },
       {

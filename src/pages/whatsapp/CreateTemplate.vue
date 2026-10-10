@@ -432,7 +432,7 @@ const handleSubmit = async () => {
                   v-model="form.header"
                   maxlength="60"
                   type="text"
-                  placeholder="e.g. Withdrawal Notification, Welcome to Panther Capital"
+                  placeholder="e.g. Withdrawal Notification, Welcome to Tech4broker"
                   class="w-full pl-9 pr-3 py-2.5 text-xs rounded-xl bg-background border border-primary-border text-primary-text outline-none focus:border-primary transition-colors placeholder:text-secondary-text font-medium"
                 />
               </div>
@@ -516,7 +516,7 @@ const handleSubmit = async () => {
               v-model="form.footer"
               maxlength="60"
               type="text"
-              placeholder="e.g. Panther Capital Ltd • Reply STOP to unsubscribe"
+              placeholder="e.g. Tech4broker Ltd • Reply STOP to unsubscribe"
               class="w-full px-3.5 py-2.5 text-xs rounded-xl bg-background border border-primary-border text-primary-text outline-none focus:border-primary transition-colors placeholder:text-secondary-text font-medium"
             />
           </div>

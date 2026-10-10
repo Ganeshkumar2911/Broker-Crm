@@ -193,7 +193,7 @@
             <input
               v-model="linkUrl"
               type="url"
-              placeholder="https://panthercapitals.com"
+              placeholder="https://tech4broker.com"
               class="w-full bg-background border border-primary-border rounded-xl px-3 py-2 text-xs text-primary-text placeholder-secondary-text/50 focus:outline-none focus:border-primary"
             />
           </div>

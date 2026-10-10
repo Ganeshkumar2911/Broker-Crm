@@ -49,7 +49,7 @@
               <div class="flex items-center justify-between gap-2 flex-wrap text-[11px]">
                 <span class="text-secondary-text">Program:</span>
                 <span class="font-semibold text-primary-text">
-                  {{ enrollment?.program_code || store.program?.name || 'Panther Loyalty' }}
+                  {{ enrollment?.program_code || store.program?.name || 'T4B Loyalty' }}
                 </span>
               </div>
               <div v-if="enrollment?.available_points !== undefined" class="flex items-center justify-between gap-2 flex-wrap text-[11px] pt-1.5 border-t border-primary-border/60">

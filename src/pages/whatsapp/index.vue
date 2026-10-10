@@ -470,11 +470,11 @@ const getCategoryBadgeClass = (category) => {
             <div class="flex items-center gap-2 min-w-0">
               <span
                 class="flex items-center gap-1 font-mono text-[11px] text-secondary-text truncate"
-                :title="tpl.waba_phone_number ? `+${tpl.waba_phone_number}` : 'Panther Capital'"
+                :title="tpl.waba_phone_number ? `+${tpl.waba_phone_number}` : 'Tech4broker'"
               >
                 <Smartphone class="w-3.5 h-3.5 text-primary-green shrink-0" />
                 <span class="text-primary-text font-semibold">
-                  {{ tpl.waba_phone_number ? `+${tpl.waba_phone_number}` : 'Panther Capital' }}
+                  {{ tpl.waba_phone_number ? `+${tpl.waba_phone_number}` : 'Tech4broker' }}
                 </span>
               </span>
               <span class="text-[10px] text-secondary-text bg-background border border-primary-border px-1.5 py-0.5 rounded font-medium uppercase shrink-0">

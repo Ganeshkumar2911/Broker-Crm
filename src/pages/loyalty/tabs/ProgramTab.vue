@@ -42,7 +42,7 @@
         </div>
 
         <h2 class="text-xl font-bold text-primary-text tracking-tight">
-          {{ program.name || 'PantherTrade Loyalty Program' }}
+          {{ program.name || 'Tech4broker Loyalty Program' }}
         </h2>
         <p class="text-xs text-secondary-text max-w-xl leading-relaxed">
           {{ program.description || 'Point accumulation engine converting live trading volume into reward stages, tier multipliers, and store product claims.' }}
@@ -222,7 +222,7 @@
             <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
               <Sparkles class="w-6 h-6" />
             </div>
-            <p class="text-xs font-semibold text-primary-text">Panther Loyalty Media</p>
+            <p class="text-xs font-semibold text-primary-text">T4B Loyalty Media</p>
             <p class="text-[11px] text-secondary-text max-w-xs leading-relaxed">
               No media banners uploaded yet. Upload images or videos in program settings.
             </p>
@@ -308,7 +308,7 @@
             <!-- Program Title & Description -->
             <div class="space-y-1.5">
               <h2 class="text-xl font-bold text-primary-text tracking-tight">
-                {{ program.name || 'PantherTrade Loyalty Program' }}
+                {{ program.name || 'Tech4broker Loyalty Program' }}
               </h2>
               <p class="text-xs text-secondary-text leading-relaxed">
                 {{ program.description || 'Point accumulation engine converting live trading volume into reward stages, tier multipliers, and store product claims.' }}

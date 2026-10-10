@@ -172,7 +172,7 @@ const documentUrl = computed(() => {
     if (props.account.document_proof.startsWith("http")) {
       return props.account.document_proof;
     }
-    let baseUrl = localStorage.getItem("custom_base_url") || "https://admin.panthercapitals.com";
+    let baseUrl = localStorage.getItem("custom_base_url") || "https://admin.tech4broker.com";
     baseUrl = baseUrl.trim().replace(/\/admin\/?$/, "").replace(/\/+$/, "");
     const cleanPath = props.account.document_proof.startsWith("/")
       ? props.account.document_proof

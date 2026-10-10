@@ -74,7 +74,7 @@
             <div class="p-3 bg-background border border-primary-border rounded-xl">
               <span class="text-[10px] text-secondary-text block">Issuer Name</span>
               <span class="font-medium text-primary-text mt-1 block truncate">
-                {{ twoFactorDetails?.issuer_name || 'Panther Trade' }}
+                {{ twoFactorDetails?.issuer_name || 'Tech4broker' }}
               </span>
             </div>
           </div>

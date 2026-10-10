@@ -39,7 +39,7 @@ const handleProceedLogin = () => {
         "success",
       );
       window.open(
-        `https://portal.panthercapitals.com/login/user?token=${secretCode}`,
+        `https://portal.tech4broker.com/login/user?token=${secretCode}`,
         "_blank",
       );
       emit("success");
@@ -115,12 +115,12 @@ const handleProceedLogin = () => {
               <span
                 class="text-[10px] px-1.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 font-mono"
               >
-                portal.panthercapitals.com
+                portal.tech4broker.com
               </span>
             </p>
             <p class="text-[11px] text-secondary-text leading-relaxed">
               You will be logged into the client's dashboard on
-              <strong>portal.panthercapitals.com</strong> using a secure
+              <strong>portal.tech4broker.com</strong> using a secure
               single-use access code.
             </p>
           </div>

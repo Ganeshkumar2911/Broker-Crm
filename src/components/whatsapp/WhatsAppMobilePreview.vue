@@ -23,7 +23,7 @@ import {
 const props = defineProps({
   businessName: {
     type: String,
-    default: 'Panther Capital',
+    default: 'Tech4broker',
   },
   name: {
     type: String,
@@ -177,7 +177,7 @@ const renderWhatsAppMarkdown = (text) => {
             </button>
             <div class="relative">
               <div class="w-9 h-9 rounded-full bg-[#111b21] flex items-center justify-center overflow-hidden border border-white/15 p-1">
-                <img src="../../assets/logo_full.svg" alt="Panther" class="w-full h-full object-contain" />
+                <img src="../../assets/logo_full.svg" alt="T4B" class="w-full h-full object-contain" />
               </div>
               <div class="absolute -bottom-0.5 -right-0.5 bg-[#00a884] text-white rounded-full p-[1px] shadow-xs">
                 <ShieldCheck class="w-2.5 h-2.5 fill-white text-[#00a884]" />
@@ -185,7 +185,7 @@ const renderWhatsAppMarkdown = (text) => {
             </div>
             <div class="min-w-0">
               <div class="flex items-center gap-1">
-                <span class="text-xs font-semibold truncate text-[#e9edef]">{{ businessName || 'Panther Capital' }}</span>
+                <span class="text-xs font-semibold truncate text-[#e9edef]">{{ businessName || 'Tech4broker' }}</span>
               </div>
               <p class="text-[10px] text-[#8696a0] leading-none flex items-center gap-1 font-medium">
                 Official Business Account

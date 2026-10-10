@@ -23,7 +23,7 @@
           <div class="flex justify-center mb-4">
             <img
               src="/logo_full.svg"
-              alt="Panther Capitals"
+              alt="Tech4broker"
               class="h-12 object-contain"
             />
           </div>
@@ -57,7 +57,7 @@
           </button>
 
           <p class="mt-6 text-center text-[11px] leading-5 text-white/40">
-            Panther Capitals Ltd we don't offer services to residents of certain
+            Tech4broker we don't offer services to residents of certain
             countries, including: Syria, North Korea, Iran, Iraq, Mauritius, USA,
             Canada, Sudan, Myanmar, Yemen, Afghanistan, Vanuatu, and those within
             the European Economic Area (EEA).

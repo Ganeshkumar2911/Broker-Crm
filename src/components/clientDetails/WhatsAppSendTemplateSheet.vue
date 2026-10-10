@@ -566,7 +566,7 @@ const handleSendTemplate = async () => {
                 </div>
                 <div class="w-full max-w-[340px]">
                   <WhatsAppMobilePreview
-                    :business-name="Array.isArray(selectedTemplate.channels) && selectedTemplate.channels.length ? selectedTemplate.channels[0] : 'Panther Capital'"
+                    :business-name="Array.isArray(selectedTemplate.channels) && selectedTemplate.channels.length ? selectedTemplate.channels[0] : 'Tech4broker'"
                     :name="selectedTemplate.name"
                     :header-type="selectedTemplate.header_type || (selectedTemplate.header ? 'text' : 'none')"
                     :header="selectedTemplate.header"

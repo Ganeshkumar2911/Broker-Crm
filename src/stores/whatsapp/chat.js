@@ -240,7 +240,7 @@ export const normalizeMessage = (raw, dtCustId = null, currentPhone = '') => {
     senderId: senderId,
     senderName: isIncoming
       ? (m.customerName || raw.customerName || 'Client')
-      : (m.senderUser?.name || raw.senderUser?.name || 'Panther Capitals'),
+      : (m.senderUser?.name || raw.senderUser?.name || 'Tech4broker'),
     text: textContent,
     mediaUrl: m.mediaUrl || raw.mediaUrl || m.media_url || raw.media_url || null,
     messageType: m.type || m.message?.messageType || m.messageType || raw.type || raw.messageType || 'text',
@@ -259,7 +259,7 @@ export const normalizeMessage = (raw, dtCustId = null, currentPhone = '') => {
     deliveryCount: m.deliveryCount || 0,
     sentCount: m.sentCount || 0,
     erroredCount: m.erroredCount || 0,
-    integrationDisplayName: isIncoming ? '' : (m.integrationDisplayName || raw.integrationDisplayName || 'Panther Capitals'),
+    integrationDisplayName: isIncoming ? '' : (m.integrationDisplayName || raw.integrationDisplayName || 'Tech4broker'),
     integrationWabaNumber: m.integrationWabaNumber || raw.integrationWabaNumber || '',
     raw: m,
   }
@@ -369,7 +369,7 @@ export const useWhatsAppChatStore = defineStore('whatsappChat', () => {
       deliveryCount: 0,
       sentCount: 1,
       erroredCount: 0,
-      integrationDisplayName: 'Panther Capitals',
+      integrationDisplayName: 'Tech4broker',
       integrationWabaNumber: '',
     }
 
@@ -457,7 +457,7 @@ export const useWhatsAppChatStore = defineStore('whatsappChat', () => {
       deliveryCount: 0,
       sentCount: 1,
       erroredCount: 0,
-      integrationDisplayName: 'Panther Capitals',
+      integrationDisplayName: 'Tech4broker',
       integrationWabaNumber: '',
     }
 

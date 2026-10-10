@@ -274,7 +274,10 @@ const handleSearchKeydown = (e) => {
 
 // Global Cmd+K / Ctrl+K / Cmd+S / Ctrl+S listener
 const handleGlobalKeydown = (e) => {
-  if ((e.metaKey || e.ctrlKey) && (e.key.toLowerCase() === "k" || e.key.toLowerCase() === "s")) {
+  if (
+    (e.metaKey || e.ctrlKey) &&
+    (e.key.toLowerCase() === "k" || e.key.toLowerCase() === "s")
+  ) {
     e.preventDefault();
     if (props.isCollapsed) {
       emit("toggle-collapse");
@@ -395,14 +398,14 @@ const handleFlyoutMouseLeave = () => {
     <div
       class="h-[60px] flex items-center justify-between px-4 border-b border-white/10"
     >
-      <div v-if="!isCollapsed" class="flex items-center gap-2.5">
-        <div class="w-48 h-28 flex items-center justify-center">
-          <img src="/logo_full.svg" alt="Logo" />
+      <div v-if="!isCollapsed" class="flex items-center gap-2.5 w-full">
+        <div class="flex items-center justify-center w-full">
+          <img src="/logo_full.png" alt="Logo" class="max-h-8 w-auto object-contain" />
         </div>
       </div>
       <div v-else class="flex items-center justify-center w-full">
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center">
-          <img src="/logo.svg" alt="Logo" />
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center">
+          <img src="/gold_logo.png" alt="Logo" class="h-6 w-6 object-contain" />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import { useTickerStore } from "@/stores/ws/ticker";
 import { usePermissionCheck } from "@/composables/usePermissionCheck";
 import { useMyPermissionsStore } from "@/stores/rbac/myPermissions";
 
-const SIDEBAR_COLLAPSED_KEY = "panther_sidebar_collapsed";
+const SIDEBAR_COLLAPSED_KEY = "t4b_sidebar_collapsed";
 const storedSidebarCollapsed =
   typeof window !== "undefined"
     ? localStorage.getItem(SIDEBAR_COLLAPSED_KEY) === "true"

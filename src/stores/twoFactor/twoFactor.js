@@ -16,7 +16,7 @@ export const useTwoFactorStore = defineStore("twoFactor", () => {
     totp_enabled: false,
     enrollment_mandatory: false,
     required_actions: [],
-    issuer_name: "Panther Trade",
+    issuer_name: "Tech4broker",
     backup_codes_remaining: 0,
     confirmed_at: null,
   });
@@ -29,7 +29,7 @@ export const useTwoFactorStore = defineStore("twoFactor", () => {
     require_password_change: false,
     require_profile_update: false,
     require_internal_transfer: false,
-    issuer_name: "Panther Trade",
+    issuer_name: "Tech4broker",
   });
 
   const selectedStaff2fa = ref(null);
@@ -87,7 +87,7 @@ export const useTwoFactorStore = defineStore("twoFactor", () => {
             totp_enabled: Boolean(data.totp_enabled),
             enrollment_mandatory: Boolean(data.enrollment_mandatory),
             required_actions: Array.isArray(data.required_actions) ? data.required_actions : [],
-            issuer_name: data.issuer_name || "Panther Trade",
+            issuer_name: data.issuer_name || "Tech4broker",
             backup_codes_remaining: data.backup_codes_remaining || 0,
             confirmed_at: data.confirmed_at || null,
           };

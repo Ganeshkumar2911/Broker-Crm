@@ -108,6 +108,6 @@ defineProps({
 defineEmits(['close', 'copy'])
 
 const getReferralUrl = (code) => {
-  return `https://portal.panthercapitals.com/register?ref=${code || ''}`
+  return `https://portal.tech4broker.com/register?ref=${code || ''}`
 }
 </script>

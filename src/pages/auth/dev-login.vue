@@ -231,7 +231,7 @@ const handleLogin = () => {
           <div class="flex justify-center mb-6">
             <img
               src="/logo_full.svg"
-              alt="Panther Capitals"
+              alt="Tech4broker"
               class="h-12 object-contain"
             />
           </div>

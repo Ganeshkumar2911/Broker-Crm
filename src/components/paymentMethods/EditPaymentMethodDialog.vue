@@ -683,7 +683,7 @@
                 </div>
                 <div>
                   <label class="block text-[11px] font-semibold text-secondary-text mb-1">Account Holder Name</label>
-                  <input v-model="form.account_name" type="text" placeholder="e.g. Panther Capital Pvt Ltd" class="w-full px-3 py-1.5 rounded-lg bg-card-background border border-primary-border text-xs text-primary-text outline-none focus:border-primary" />
+                  <input v-model="form.account_name" type="text" placeholder="e.g. Tech4broker" class="w-full px-3 py-1.5 rounded-lg bg-card-background border border-primary-border text-xs text-primary-text outline-none focus:border-primary" />
                 </div>
                 <div>
                   <label class="block text-[11px] font-semibold text-secondary-text mb-1">Account Number</label>

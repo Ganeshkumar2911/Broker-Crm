@@ -16,9 +16,9 @@ export const emailsHandlers = [
       data: {
         provider: 'brevo',
         api_key: faker.string.alphanumeric(32),
-        from_name: 'Panther Capital Admin',
-        from_email: 'admin@panthercapital.com',
-        reply_to_email: 'support@panthercapital.com',
+        from_name: 'Tech4broker Admin',
+        from_email: 'admin@t4bcapital.com',
+        reply_to_email: 'support@t4bcapital.com',
         is_active: true
       }
     })
@@ -105,7 +105,7 @@ export const emailsHandlers = [
       subject: faker.lorem.sentence(),
       event: faker.helpers.arrayElement(['delivered', 'bounced', 'opened', 'clicked', 'request']),
       date: faker.date.recent().toISOString(),
-      from: 'admin@panthercapital.com',
+      from: 'admin@t4bcapital.com',
       tag: faker.string.alphanumeric(8).toUpperCase()
     }))
 
@@ -188,7 +188,7 @@ export const emailsHandlers = [
       subject: faker.lorem.sentence(),
       email: faker.internet.email(),
       messageId: messageId,
-      from: 'admin@panthercapital.com',
+      from: 'admin@t4bcapital.com',
       date: faker.date.recent().toISOString(),
       body: '<div style="padding: 20px; font-family: sans-serif;"><h2>Your Account Alert</h2><p>Here is your mock sandbox email content.</p></div>',
       events: Array.from({ length: faker.number.int({ min: 2, max: 5 }) }).map(() => ({

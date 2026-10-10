@@ -138,7 +138,7 @@ const copyText = (text) => {
           <!-- Right: Interactive Mobile Mockup (Fixed / Stationary) -->
           <div class="lg:col-span-6 h-full flex items-center justify-center p-1 overflow-hidden min-h-0">
             <WhatsAppMobilePreview
-              :business-name="Array.isArray(template.channels) && template.channels.length ? template.channels[0] : (template.waba_phone_number ? `+${template.waba_phone_number}` : 'Panther Capital')"
+              :business-name="Array.isArray(template.channels) && template.channels.length ? template.channels[0] : (template.waba_phone_number ? `+${template.waba_phone_number}` : 'Tech4broker')"
               :name="template.name"
               :header-type="template.header_type || (template.header ? 'text' : 'none')"
               :header="template.header"

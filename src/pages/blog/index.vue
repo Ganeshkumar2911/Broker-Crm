@@ -643,7 +643,7 @@ const getImageUrl = (imagePath) => {
   if (!imagePath) return "";
   if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) return imagePath;
 
-  let baseUrl = localStorage.getItem("custom_base_url") || "https://admin.panthercapitals.com";
+  let baseUrl = localStorage.getItem("custom_base_url") || "https://admin.tech4broker.com";
   baseUrl = baseUrl.trim().replace(/\/admin\/?$/, "").replace(/\/+$/, "");
   const cleanPath = imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
   return `${baseUrl}${cleanPath}`;

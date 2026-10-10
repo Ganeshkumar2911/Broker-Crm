@@ -129,7 +129,7 @@
           <input
             type="text"
             v-model="localForm.issuer_name"
-            placeholder="e.g. Panther Trade"
+            placeholder="e.g. Tech4broker"
             class="input-field px-3.5 py-2.5 text-xs font-medium"
           />
           <span class="text-[11px] text-secondary-text mt-1 block">
@@ -180,7 +180,7 @@ const localForm = ref({
   require_password_change: false,
   require_profile_update: false,
   require_internal_transfer: false,
-  issuer_name: "Panther Trade",
+  issuer_name: "Tech4broker",
 });
 
 const syncLocalForm = () => {

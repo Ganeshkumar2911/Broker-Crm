@@ -264,11 +264,11 @@ export const useWhatsAppTemplatesStore = defineStore('whatsappTemplates', () => 
     //   "body_text": "Hello {{username}} welcome to {{or_name}} we are here to help you.",
     //   "body_example": {
     //     "username": "Rahul",
-    //     "or_name": "Panther Capital"
+    //     "or_name": "Tech4broker"
     //   },
     //   "header_text": "Vivek Header",
     //   "header_format": "TEXT",
-    //   "footer_text": "panther capital"
+    //   "footer_text": "Tech4broker"
     // }
     const templatePayload = {
       name: payload.name?.trim().toLowerCase().replace(/\s+/g, '_'),

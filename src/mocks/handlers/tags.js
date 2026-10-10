@@ -16,7 +16,7 @@ export const tagsHandlers = [
         id: i + 1,
         name: name,
         slug: name.toLowerCase().replace(/\s+/g, '-'),
-        color: faker.internet.color(),
+        color: faker.color.rgb(),
         status: faker.helpers.arrayElement(['active', 'inactive']),
         lead_usage_count: faker.number.int({ min: 0, max: 50 }),
         user_usage_count: faker.number.int({ min: 0, max: 50 }),

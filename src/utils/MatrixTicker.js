@@ -4,7 +4,7 @@ class MatrixTicker {
   constructor({ token, reconnect = true, max_retry = 50, max_delay = 60 }) {
     const isProdDomain =
       typeof window !== "undefined" &&
-      window.location.hostname === "admin.panthercapitals.com";
+      window.location.hostname === "admin.tech4broker.com";
 
     const customBaseUrl =
       typeof window !== "undefined"
@@ -19,10 +19,10 @@ class MatrixTicker {
       }
     }
 
-    const DEV_WS_URL = "https://admin.panthercapitals.com/";
+    const DEV_WS_URL = "https://admin.tech4broker.com/";
     // const DEV_WS_URL = "https://ls01t281-2504.inc1.devtunnels.ms/";
     const PROD_WS_URL = isProdDomain
-      ? "https://admin.panthercapitals.com/"
+      ? "https://admin.tech4broker.com/"
       : "https://1pz4zm0b-2504.euw.devtunnels.ms/";
       // : "https://ls01t281-2504.inc1.devtunnels.ms/";
 

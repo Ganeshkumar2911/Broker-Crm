@@ -21,11 +21,11 @@ export const COUNTRIES = [
 ]
 
 export const STAFF = [
-  { id: 1, name: 'Rahul Sharma', avatarColor: 'bg-blue-600', email: 'rahul.s@panthercapitals.com' },
-  { id: 2, name: 'Priya Patel', avatarColor: 'bg-purple-600', email: 'priya.p@panthercapitals.com' },
-  { id: 3, name: 'Amit Verma', avatarColor: 'bg-amber-600', email: 'amit.v@panthercapitals.com' },
-  { id: 4, name: 'Sneha Gupta', avatarColor: 'bg-emerald-600', email: 'sneha.g@panthercapitals.com' },
-  { id: 5, name: 'Vikram Malhotra', avatarColor: 'bg-indigo-600', email: 'vikram.m@panthercapitals.com' },
+  { id: 1, name: 'Rahul Sharma', avatarColor: 'bg-blue-600', email: 'rahul.s@tech4broker.com' },
+  { id: 2, name: 'Priya Patel', avatarColor: 'bg-purple-600', email: 'priya.p@tech4broker.com' },
+  { id: 3, name: 'Amit Verma', avatarColor: 'bg-amber-600', email: 'amit.v@tech4broker.com' },
+  { id: 4, name: 'Sneha Gupta', avatarColor: 'bg-emerald-600', email: 'sneha.g@tech4broker.com' },
+  { id: 5, name: 'Vikram Malhotra', avatarColor: 'bg-indigo-600', email: 'vikram.m@tech4broker.com' },
 ]
 
 export const SOURCES = [
@@ -58,7 +58,7 @@ export const INITIAL_LEADS = [
       { id: 2, text: 'Sent welcome PDF & account specification chart via email.', time: 'Today 10:30 AM', author: 'Rahul Sharma' }
     ],
     timeline: [
-      { id: 1, title: 'Lead Created', desc: 'Inbound submission from Panther Website contact form', time: '09:30 AM', icon: 'Plus' },
+      { id: 1, title: 'Lead Created', desc: 'Inbound submission from T4B Website contact form', time: '09:30 AM', icon: 'Plus' },
       { id: 2, title: 'Assigned to Staff', desc: 'Auto-routed to Senior RM Rahul Sharma', time: '09:40 AM', icon: 'UserCheck' },
       { id: 3, title: 'Contact Attempted', desc: 'Outbound call initiated (+971 50 123 4567)', time: '10:15 AM', icon: 'PhoneCall' },
     ],
