@@ -177,7 +177,7 @@ const renderWhatsAppMarkdown = (text) => {
             </button>
             <div class="relative">
               <div class="w-9 h-9 rounded-full bg-[#111b21] flex items-center justify-center overflow-hidden border border-white/15 p-1">
-                <img src="../../assets/logo_full.svg" alt="T4B" class="w-full h-full object-contain" />
+                <img src="../../assets/logo_full.png" alt="T4B" class="w-full h-full object-contain" />
               </div>
               <div class="absolute -bottom-0.5 -right-0.5 bg-[#00a884] text-white rounded-full p-[1px] shadow-xs">
                 <ShieldCheck class="w-2.5 h-2.5 fill-white text-[#00a884]" />

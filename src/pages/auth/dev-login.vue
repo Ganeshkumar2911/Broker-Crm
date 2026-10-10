@@ -7,7 +7,7 @@ import authToken from "@/common/authToken";
 import urls from "@/api/urls";
 import { useRouter } from "vue-router";
 import { useMyPermissionsStore } from "@/stores/rbac/myPermissions";
-import bgImage from "@/assets/Login-img.jpeg";
+import bgImage from "@/assets/login-bg.jpg";
 import BaseSelect from "@/components/common/BaseSelect.vue";
 
 const router = useRouter();
@@ -230,7 +230,7 @@ const handleLogin = () => {
         <div class="text-center mb-8">
           <div class="flex justify-center mb-6">
             <img
-              src="/logo_full.svg"
+              src="/logo_full.png"
               alt="Tech4broker"
               class="h-12 object-contain"
             />

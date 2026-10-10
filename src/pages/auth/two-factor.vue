@@ -22,7 +22,7 @@
         <div class="text-center mb-6">
           <div class="flex justify-center mb-4">
             <img
-              src="/logo_full.svg"
+              src="/logo_full.png"
               alt="Tech4broker"
               class="h-12 object-contain"
             />
@@ -88,7 +88,7 @@ import { useRoute, useRouter } from "vue-router";
 import { useTwoFactorStore } from "@/stores/twoFactor/twoFactor";
 import { useSnackbarStore } from "@/stores/snackbar/snackbar";
 import authToken from "@/common/authToken";
-import bgImage from "@/assets/Login-img.jpeg";
+import bgImage from "@/assets/login-bg.jpg";
 import TwoFactorAuthStep from "./components/TwoFactorAuthStep.vue";
 import TwoFactorSetupStep from "./components/TwoFactorSetupStep.vue";
 
