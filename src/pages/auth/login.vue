@@ -9,7 +9,7 @@ import { useRouter } from 'vue-router'
 import { useMyPermissionsStore } from '@/stores/rbac/myPermissions'
 import logoLight from '@/assets/logo_full.png'
 // import logoDark from '@/assets/logo_dark_full.png'
-import bgImage from '@/assets/Login-img.jpeg'
+import bgImage from '@/assets/login-bg.jpg'
 
 const router = useRouter()
 const snackbar = useSnackbarStore()
@@ -165,14 +165,13 @@ const goToRegister = () => {
     <!-- LEFT SIDE -->
    <div class="hidden lg:flex lg:w-1/2 pl-4 pt-4">
   <div
-    class="w-full h-[calc(100vh-24px)] overflow-hidden
-           rounded-tr-3xl rounded-tl-3xl rounded-br-3xl rounded-bl-none
-           shadow-2xl"
+    class="relative w-full h-[calc(100vh-24px)] overflow-hidden rounded-[3rem] shadow-2xl bg-[#0A0A0A]"
   >
+    <div class="absolute inset-0 pointer-events-none rounded-[3rem] shadow-[inset_0_0_100px_40px_rgba(10,10,10,0.8)] z-10"></div>
     <img
       :src="bgImage"
       alt="Login Background"
-      class="w-full h-full object-cover"
+      class="w-full h-full object-contain relative z-0"
     />
   </div>
 </div>
