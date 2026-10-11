@@ -31,7 +31,8 @@
       title="Click to center on this location"
       @click="recenterMap"
     >
-      <span class="text-sm">🇮🇳</span>
+      <span v-if="flagEmoji" class="text-sm">{{ flagEmoji }}</span>
+      <MapPin v-else class="w-3.5 h-3.5 text-primary shrink-0" />
       <div class="min-w-0">
         <p class="text-[11px] font-bold text-primary-text truncate leading-tight group-hover:text-primary transition-colors">
           {{ locationText }}
@@ -75,7 +76,14 @@ const geoData = ref({
   lat: 21.2333,
   lon: 81.6333,
   isp: 'AS137666 NIXI',
-  asn: 'AS137666'
+  asn: 'AS137666',
+  country_code: 'IN'
+})
+
+const flagEmoji = computed(() => {
+  const cc = geoData.value.country_code
+  if (!cc || typeof cc !== 'string' || cc.length !== 2) return ''
+  return String.fromCodePoint(...cc.toUpperCase().split('').map((c) => 127397 + c.charCodeAt(0)))
 })
 
 const locationText = computed(() => {
@@ -246,13 +254,14 @@ const updateMapPosition = () => {
 
 // Fallback for private / unreachable IPs
 const getFallbackGeo = (ip) => {
-  if (!ip) return { city: 'Raipur', region: 'Chhattisgarh', country: 'India', lat: 21.2333, lon: 81.6333, isp: 'AS137666 NIXI', asn: 'AS137666' }
+  const def = { city: 'Raipur', region: 'Chhattisgarh', country: 'India', country_code: 'IN', lat: 21.2333, lon: 81.6333, isp: 'AS137666 NIXI', asn: 'AS137666' }
+  if (!ip) return def
 
   if (ip === '127.0.0.1' || ip.startsWith('192.168.') || ip.startsWith('10.') || ip === 'localhost') {
-    return { city: 'Localhost', region: 'Private Network', country: '', lat: 21.2333, lon: 81.6333, isp: 'Local Loopback', asn: '' }
+    return { city: 'Localhost', region: 'Private Network', country: '', country_code: '', lat: 21.2333, lon: 81.6333, isp: 'Local Loopback', asn: '' }
   }
 
-  return { city: 'Raipur', region: 'Chhattisgarh', country: 'India', lat: 21.2333, lon: 81.6333, isp: 'AS137666 NIXI', asn: 'AS137666' }
+  return def
 }
 
 // Live IP Geolocation lookup
@@ -293,6 +302,7 @@ const resolveIp = async (ip) => {
           city: data.city || fallback.city,
           region: data.region || fallback.region,
           country: data.country || fallback.country,
+          country_code: data.country_code || fallback.country_code,
           lat: Number(data.latitude),
           lon: Number(data.longitude),
           isp: data.connection?.isp || data.connection?.org || fallback.isp,
@@ -324,6 +334,7 @@ const resolveIp = async (ip) => {
           city: data2.cityName || fallback.city,
           region: data2.regionName || fallback.region,
           country: data2.countryName || fallback.country,
+          country_code: data2.countryCode || fallback.country_code,
           lat: Number(data2.latitude),
           lon: Number(data2.longitude),
           isp: fallback.isp,

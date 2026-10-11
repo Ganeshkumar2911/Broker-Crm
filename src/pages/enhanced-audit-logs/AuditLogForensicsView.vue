@@ -473,7 +473,7 @@
 
           <AuditLogNetworkMap
             class="flex-1 min-h-[320px] lg:min-h-[380px]"
-            :ip-address="ipAddress"
+            :ip-address="ipAddress !== '—' ? ipAddress : ''"
             @geo-resolved="onGeoResolved"
           />
 
@@ -1166,6 +1166,24 @@ const mutationRows = computed(() => {
     return rows
   }
 
+  const oldValues = r.old_values || r.details?.old_values
+  const newValues = r.new_values || r.details?.new_values
+  if ((oldValues && typeof oldValues === 'object') || (newValues && typeof newValues === 'object')) {
+    const keys = new Set([...Object.keys(oldValues || {}), ...Object.keys(newValues || {})])
+    keys.forEach((field) => {
+      const oldVal = oldValues?.[field] !== undefined ? oldValues[field] : '—'
+      const newVal = newValues?.[field] !== undefined ? newValues[field] : '—'
+      rows.push({
+        field,
+        label: titleCase(field),
+        oldDisplay: formatInlineValue(oldVal),
+        newDisplay: formatInlineValue(newVal),
+        description: `Field ${titleCase(field)} updated from ${formatInlineValue(oldVal)} to ${formatInlineValue(newVal)}.`
+      })
+    })
+    if (rows.length) return rows
+  }
+
   return rows
 })
 
@@ -1228,7 +1246,7 @@ const countryCodeToFlag = (cc) => {
 
 const countryFlag = computed(() => {
   const bc = rawRecord.value.business_context || {}
-  const cc = bc.country || resolvedGeo.value.country_code
+  const cc = resolvedGeo.value.country_code || bc.country
   if (cc && cc.length === 2) {
     return countryCodeToFlag(cc)
   }
@@ -1266,15 +1284,15 @@ const parsedAgent = computed(() => {
   } else if (lowercase.includes('windows')) {
     os = 'Windows'
     device = 'Windows PC'
+  } else if (lowercase.includes('iphone') || lowercase.includes('ipad')) {
+    os = 'iOS'
+    device = lowercase.includes('ipad') ? 'iPad' : 'iPhone'
   } else if (lowercase.includes('macintosh') || lowercase.includes('mac os')) {
     os = 'macOS'
     device = 'Mac'
   } else if (lowercase.includes('android')) {
     os = 'Android'
     device = 'Mobile Device'
-  } else if (lowercase.includes('iphone') || lowercase.includes('ipad')) {
-    os = 'iOS'
-    device = lowercase.includes('ipad') ? 'iPad' : 'iPhone'
   } else if (lowercase.includes('linux')) {
     os = 'Linux'
     device = 'Linux Station'
