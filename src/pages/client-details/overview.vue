@@ -31,8 +31,8 @@
 
       <!-- Stat Strip Skeleton -->
       <div class="bg-card-background/40 border border-primary-border rounded-xl p-5 sm:p-6">
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-primary-border/60">
-          <div v-for="i in 4" :key="i" class="flex flex-col items-center gap-2 pt-2 sm:pt-0">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-5 sm:gap-6 text-center sm:divide-x divide-primary-border/60">
+          <div v-for="i in 4" :key="i" class="flex flex-col items-center gap-2">
             <div class="w-9 h-9 rounded-xl bg-primary-border/40" />
             <div class="h-7 w-16 bg-primary-border/70 rounded" />
             <div class="h-3 w-24 bg-primary-border/40 rounded" />
@@ -87,9 +87,9 @@
       <div
         class="bg-card-background/40 border border-primary-border rounded-xl p-5 sm:p-6"
       >
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-primary-border/60">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-5 sm:gap-6 text-center sm:divide-x divide-primary-border/60">
           <!-- Days Active -->
-          <div class="flex flex-col items-center gap-2 pt-2 sm:pt-0">
+          <div class="flex flex-col items-center gap-2">
             <div class="w-9 h-9 rounded-xl bg-background/50 flex items-center justify-center text-blue-500/80">
               <span class="material-symbols-rounded text-[18px]">calendar_month</span>
             </div>
@@ -102,7 +102,7 @@
           </div>
 
           <!-- Deposits Count -->
-          <div class="flex flex-col items-center gap-2 pt-2 sm:pt-0">
+          <div class="flex flex-col items-center gap-2">
             <div class="w-9 h-9 rounded-xl bg-background/50 flex items-center justify-center text-primary-green/80">
               <span class="material-symbols-rounded text-[18px]">trending_up</span>
             </div>
@@ -115,7 +115,7 @@
           </div>
 
           <!-- Withdrawals Count -->
-          <div class="flex flex-col items-center gap-2 pt-2 sm:pt-0">
+          <div class="flex flex-col items-center gap-2">
             <div class="w-9 h-9 rounded-xl bg-background/50 flex items-center justify-center text-primary-red/80">
               <span class="material-symbols-rounded text-[18px]">trending_down</span>
             </div>
@@ -128,7 +128,7 @@
           </div>
 
           <!-- Configured Accounts -->
-          <div class="flex flex-col items-center gap-2 pt-2 sm:pt-0">
+          <div class="flex flex-col items-center gap-2">
             <div class="w-9 h-9 rounded-xl bg-background/50 flex items-center justify-center text-purple-500/80">
               <span class="material-symbols-rounded text-[18px]">account_balance_wallet</span>
             </div>
@@ -146,7 +146,7 @@
       <div class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-stretch">
         <!-- Left Health Score Ring Gauge & Status (4 cols) -->
         <div
-          class="lg:col-span-4 bg-card-background/40 border border-primary-border rounded-xl p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden"
+          class="xl:col-span-4 bg-card-background/40 border border-primary-border rounded-xl p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden"
         >
           <!-- Card Header -->
           <div class="flex items-center justify-between pb-4 border-b border-primary-border/60">
@@ -233,7 +233,7 @@
 
         <!-- Right Health Breakdown Dimension Cards (8 cols) -->
         <div
-          class="lg:col-span-8 bg-card-background/40 border border-primary-border rounded-xl p-5 sm:p-6 flex flex-col justify-between"
+          class="xl:col-span-8 bg-card-background/40 border border-primary-border rounded-xl p-5 sm:p-6 flex flex-col justify-between"
         >
           <!-- Breakdown Header -->
           <div class="flex items-center justify-between pb-4 border-b border-primary-border/60">

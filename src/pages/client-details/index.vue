@@ -1,22 +1,32 @@
 <template>
+  <!--
+    Layout strategy:
+    - < lg  : natural document flow — the parent layout <main> scrolls the whole page,
+              sidebar collapses into a "Client Information" accordion, tabs stick to top.
+    - >= lg : fixed-height "sub dashboard" — sidebar + main content scroll independently.
+  -->
   <div
-    class="h-screen bg-background text-primary-text flex flex-col -m-4 lg:-m-6"
+    class="bg-background text-primary-text flex flex-col -m-4 lg:-m-6 lg:h-screen"
   >
     <!-- TOP BAR -->
-    <div class="border-b border-primary-border px-6 py-4">
-      <div class="flex items-start justify-between gap-4">
-        <!-- Avatar -->
-        <div class="md:flex-2 flex items-center gap-4">
+    <div class="border-b border-primary-border px-4 sm:px-6 py-4">
+      <div
+        class="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-4"
+      >
+        <!-- Avatar + Name + meta -->
+        <div class="xl:flex-2 flex items-start xl:items-center gap-3 sm:gap-4 min-w-0">
           <div
-            class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-semibold text-lg shrink-0"
+            class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-accent flex items-center justify-center text-white font-semibold text-base sm:text-lg shrink-0"
           >
             {{ initials }}
           </div>
 
           <!-- Name + meta -->
-          <div class="flex-1">
-            <div class="flex items-center gap-3 flex-wrap">
-              <h1 class="text-lg font-semibold text-primary-text">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-x-3 gap-y-1.5 flex-wrap">
+              <h1
+                class="text-base sm:text-lg font-semibold text-primary-text break-words min-w-0"
+              >
                 {{ user.name }}
               </h1>
               <span
@@ -57,7 +67,7 @@
               </template>
             </div>
 
-            <div class="flex items-center gap-6 mt-1 flex-wrap">
+            <div class="flex items-center gap-x-6 gap-y-1 mt-1 flex-wrap">
               <span class="text-[11px] text-secondary-text">
                 CLIENT ID
                 <span class="text-primary-text font-medium tabular-nums"
@@ -74,107 +84,121 @@
           </div>
         </div>
 
-        <div class="border-l border-primary-border h-20"></div>
+        <div class="hidden xl:block border-l border-primary-border h-20"></div>
 
-        <!-- Email / Phone / KYC -->
-        <div class="hidden flex-1 md:flex flex-col gap-2 text-sm">
-          <div>
-            <p
-              class="text-[11px] text-secondary-text uppercase tracking-widest mb-0.5"
-            >
-              Email
-            </p>
-            <p class="text-primary-text tabular-nums">{{ user.email }}</p>
-          </div>
-          <div>
-            <p
-              class="text-[11px] text-secondary-text uppercase tracking-widest"
-            >
-              Phone
-            </p>
-            <p class="text-primary-text tabular-nums">
-              {{ user.phone_number ?? "-" }}
-            </p>
-          </div>
-        </div>
-
-        <div class="border-l border-primary-border h-20"></div>
-
-        <div class="flex-1">
-          <div class="flex items-center gap-2">
-            <p
-              class="text-[11px] text-secondary-text uppercase tracking-widest mb-0.5"
-            >
-              KYC
-            </p>
-            <span
-              class="px-2 py-0.5 rounded-full text-[11px] font-semibold capitalize border"
-              :class="kycClass"
-            >
-              {{ kycStatus }}
-            </span>
-          </div>
-          <div>
-            <p
-              class="text-[11px] text-secondary-text uppercase tracking-widest mb-0.5"
-            >
-              Country
-            </p>
-            <p class="text-primary-text flex items-center gap-1.5">
-              <span
-                v-if="user.country && getFlagCode(user.country)"
-                :class="[
-                  'fi',
-                  `fi-${getFlagCode(user.country)}`,
-                  'fis',
-                  'w-4 h-3 shrink-0',
-                ]"
-              ></span>
-              <span>{{ cleanCountryLabel(user.country) || "—" }}</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="border-l border-primary-border h-20 hidden md:block"></div>
-
-        <div class="hidden md:flex flex-col gap-2 justify-center">
-          <div>
-            <p class="text-[11px] text-secondary-text uppercase tracking-widest mb-1.5">
-              Auto Withdrawal
-            </p>
-            <label class="inline-flex items-center gap-2 cursor-pointer shrink-0 select-none" @click.prevent="handleToggleClick">
-              <input
-                type="checkbox"
-                role="switch"
-                :checked="user.eligible_for_auto_withdrawal"
-                class="peer sr-only"
-              />
-              <span
-                class="relative block h-5.5 w-10 rounded-full bg-zinc-300 transition-colors duration-200 dark:bg-zinc-600 peer-checked:bg-emerald-500 peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-500/40 peer-checked:[&>span]:translate-x-4.5"
-                :class="{'opacity-50 pointer-events-none': isUpdatingAutoWithdrawal}"
+        <!--
+          Details: on mobile/tablet this is a compact card grid; on xl the inner
+          groups switch from `contents` to flex columns to restore the inline row.
+        -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3 p-3 rounded-xl border border-primary-border bg-card-background/40 xl:flex xl:flex-3 xl:items-start xl:gap-4 xl:p-0 xl:border-0 xl:rounded-none xl:bg-transparent min-w-0"
+        >
+          <!-- Email / Phone -->
+          <div class="max-xl:contents xl:flex-1 xl:flex xl:flex-col xl:gap-2 text-sm min-w-0">
+            <div class="col-span-2 min-w-0">
+              <p
+                class="text-[11px] text-secondary-text uppercase tracking-widest mb-0.5"
               >
+                Email
+              </p>
+              <p class="text-primary-text tabular-nums break-all text-[13px] sm:text-sm">
+                {{ user.email || "—" }}
+              </p>
+            </div>
+            <div class="min-w-0">
+              <p
+                class="text-[11px] text-secondary-text uppercase tracking-widest mb-0.5"
+              >
+                Phone
+              </p>
+              <p class="text-primary-text tabular-nums break-all text-[13px] sm:text-sm">
+                {{ user.phone_number ?? "-" }}
+              </p>
+            </div>
+          </div>
+
+          <div class="hidden xl:block border-l border-primary-border h-20"></div>
+
+          <!-- KYC / Country -->
+          <div class="max-xl:contents xl:flex-1 xl:flex xl:flex-col xl:gap-2 min-w-0">
+            <div class="flex flex-col items-start xl:flex-row xl:items-center gap-1 xl:gap-2 min-w-0">
+              <p
+                class="text-[11px] text-secondary-text uppercase tracking-widest xl:mb-0.5"
+              >
+                KYC
+              </p>
+              <span
+                class="px-2 py-0.5 rounded-full text-[11px] font-semibold capitalize border"
+                :class="kycClass"
+              >
+                {{ kycStatus }}
+              </span>
+            </div>
+            <div class="min-w-0">
+              <p
+                class="text-[11px] text-secondary-text uppercase tracking-widest mb-0.5"
+              >
+                Country
+              </p>
+              <p class="text-primary-text flex items-center gap-1.5 text-[13px] sm:text-sm">
                 <span
-                  class="absolute left-0.75 top-0.75 h-4 w-4 rounded-full bg-white shadow-sm transition-transform duration-200"
+                  v-if="user.country && getFlagCode(user.country)"
+                  :class="[
+                    'fi',
+                    `fi-${getFlagCode(user.country)}`,
+                    'fis',
+                    'w-4 h-3 shrink-0',
+                  ]"
                 ></span>
-              </span>
-              <span
-                class="text-xs font-bold"
-                :class="user.eligible_for_auto_withdrawal ? 'text-emerald-500' : 'text-zinc-500'"
-              >
-                {{ user.eligible_for_auto_withdrawal ? 'Enabled' : 'Disabled' }}
-              </span>
-            </label>
+                <span class="truncate">{{ cleanCountryLabel(user.country) || "—" }}</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="hidden xl:block border-l border-primary-border h-20"></div>
+
+          <!-- Auto Withdrawal -->
+          <div class="max-xl:contents xl:flex xl:flex-col xl:gap-2 xl:justify-center">
+            <div class="min-w-0">
+              <p class="text-[11px] text-secondary-text uppercase tracking-widest mb-1.5">
+                Auto Withdrawal
+              </p>
+              <label class="inline-flex items-center gap-2 cursor-pointer shrink-0 select-none" @click.prevent="handleToggleClick">
+                <input
+                  type="checkbox"
+                  role="switch"
+                  :checked="user.eligible_for_auto_withdrawal"
+                  class="peer sr-only"
+                />
+                <span
+                  class="relative block h-5.5 w-10 rounded-full bg-zinc-300 transition-colors duration-200 dark:bg-zinc-600 peer-checked:bg-emerald-500 peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-500/40 peer-checked:[&>span]:translate-x-4.5"
+                  :class="{'opacity-50 pointer-events-none': isUpdatingAutoWithdrawal}"
+                >
+                  <span
+                    class="absolute left-0.75 top-0.75 h-4 w-4 rounded-full bg-white shadow-sm transition-transform duration-200"
+                  ></span>
+                </span>
+                <span
+                  class="text-xs font-bold"
+                  :class="user.eligible_for_auto_withdrawal ? 'text-emerald-500' : 'text-zinc-500'"
+                >
+                  {{ user.eligible_for_auto_withdrawal ? 'Enabled' : 'Disabled' }}
+                </span>
+              </label>
+            </div>
           </div>
         </div>
 
         <!-- <div class="border-l border-primary-border h-20"></div> -->
 
         <!-- Quick Actions -->
-        <div class="shrink-0 border border-primary-border rounded-lg p-3">
+        <div
+          class="xl:shrink-0 border border-primary-border rounded-lg p-3 flex items-center justify-between gap-3 flex-wrap xl:block"
+        >
           <p class="text-secondary-text font-extralight text-xs">
             Quick Actions
           </p>
-          <div class="flex items-center gap-1.5 mt-2">
+          <div class="flex items-center gap-1.5 flex-wrap xl:mt-2">
             <Tooltip
               v-for="action in visibleQuickActions"
               :key="action.label"
@@ -215,13 +239,34 @@
     </div>
 
     <!-- BODY -->
-    <div class="flex flex-1 overflow-hidden">
+    <div class="flex flex-col lg:flex-row flex-1 lg:overflow-hidden min-h-0">
+      <!-- Mobile: toggle for the client info sidebar -->
+      <button
+        type="button"
+        id="client-info-mobile-toggle"
+        @click="mobileInfoOpen = !mobileInfoOpen"
+        :aria-expanded="mobileInfoOpen"
+        aria-controls="client-info-sidebar"
+        class="lg:hidden flex items-center justify-between gap-2 px-4 sm:px-6 py-3 border-b border-primary-border text-sm font-medium text-secondary-text hover:text-primary-text hover:bg-card-background/40 transition-colors"
+      >
+        <span class="flex items-center gap-2">
+          <Info class="w-4 h-4" />
+          Client Information
+        </span>
+        <ChevronDown
+          class="w-4 h-4 transition-transform duration-200"
+          :class="mobileInfoOpen ? 'rotate-180' : ''"
+        />
+      </button>
+
       <!-- LEFT SIDEBAR -->
       <aside
-        class="w-52 shrink-0 border-r border-primary-border overflow-y-auto no-scrollbar"
+        id="client-info-sidebar"
+        class="w-full lg:w-52 shrink-0 border-b lg:border-b-0 lg:border-r border-primary-border lg:overflow-y-auto no-scrollbar bg-card-background/20 lg:bg-transparent"
+        :class="mobileInfoOpen ? 'block' : 'hidden lg:block'"
       >
-        <div class="p-3 space-y-1">
-          <template v-for="section in sidebarSections" :key="section.key">
+        <div class="p-3 sm:px-5 lg:px-3 space-y-1">
+          <div v-for="section in sidebarSections" :key="section.key">
             <!-- Section header (expandable) -->
             <button
               @click="toggleSection(section.key)"
@@ -237,15 +282,16 @@
               />
             </button>
 
-            <!-- Info fields -->
+            <!-- Info fields (grid on mobile/tablet, stacked list on desktop sidebar) -->
             <div
               v-if="section.isInfo && expanded[section.key]"
-              class="ml-3 pl-3 border-l border-primary-border space-y-2 py-1"
+              class="ml-3 pl-3 border-l border-primary-border py-1 grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2.5 lg:block lg:space-y-2"
             >
               <div
                 v-for="item in section.fields"
                 :key="item.label"
-                class="text-xs"
+                class="text-xs min-w-0"
+                :class="isWideField(item) ? 'col-span-full' : ''"
               >
                 <p
                   class="text-[10px] text-secondary-text uppercase tracking-widest mb-0.5"
@@ -264,7 +310,7 @@
                       :key="acc.account_number || acc.login || acc.id || acc || idx"
                       @click="goToTradingAccount(acc.account_number || acc.login || acc.id || acc)"
                       :title="`Trading Account: #${acc.account_number || acc.login || acc.id || acc}${acc.account_type ? ' (' + acc.account_type + ')' : ''} — Click to view`"
-                      class="font-mono text-[9px] px-1.5 py-0.5 rounded-md cursor-pointer hover:scale-105 active:scale-95 transition-all duration-150 inline-flex items-center font-semibold border shadow-2xs"
+                      class="font-mono text-[10px] lg:text-[9px] px-1.5 py-0.5 rounded-md cursor-pointer hover:scale-105 active:scale-95 transition-all duration-150 inline-flex items-center font-semibold border shadow-2xs"
                       :class="getAccountBadgeClass(acc)"
                     >
                       {{ acc.account_number || acc.login || acc.id || acc }}
@@ -282,7 +328,7 @@
                     <span
                       v-for="t in accountTypesList"
                       :key="t"
-                      class="text-[9px] px-1.5 py-0.5 rounded-md capitalize font-semibold border"
+                      class="text-[10px] lg:text-[9px] px-1.5 py-0.5 rounded-md capitalize font-semibold border"
                       :class="getAccountBadgeClass({ account_type: t })"
                     >
                       {{ String(t).replace(/_/g, " ") }}
@@ -333,34 +379,38 @@
                 {{ child.label }}
               </RouterLink>
             </div>
-          </template>
+          </div>
         </div>
       </aside>
 
       <!-- MAIN CONTENT (router-view) -->
-      <main class="flex-1 overflow-y-auto no-scrollbar px-5 pb-5">
+      <main class="flex-1 min-w-0 lg:overflow-y-auto no-scrollbar px-3 sm:px-5 pb-5">
         <div
-          class="flex items-center justify-between gap-3 overflow-x-auto sticky top-0 z-30 bg-background border-b border-primary-border py-3"
+          class="flex items-center justify-between gap-2 sm:gap-3 sticky top-0 z-30 bg-background border-b border-primary-border py-2.5 sm:py-3 -mx-3 px-3 sm:mx-0 sm:px-0"
         >
-          <div class="flex items-center gap-1 overflow-x-auto no-scrollbar">
+          <div
+            ref="tabsScrollRef"
+            class="flex items-center gap-1 overflow-x-auto no-scrollbar min-w-0 flex-1"
+          >
             <RouterLink
               v-for="tab in tabs"
               :key="tab.key"
               :to="tab.to"
-              class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+              :data-active="isTabActive(tab) ? 'true' : null"
+              class="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors whitespace-nowrap shrink-0"
               :class="
                 isTabActive(tab)
                   ? 'bg-primary text-btn-text-primary shadow-xs'
                   : 'text-secondary-text hover:bg-card-background hover:text-primary-text'
               "
             >
-              <component :is="tab.icon" class="w-4 h-4" />
+              <component :is="tab.icon" class="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               {{ tab.label }}
             </RouterLink>
           </div>
 
           <!-- Global Refresh Button for all tabs -->
-          <div class="flex items-center shrink-0 pr-1">
+          <div class="flex items-center shrink-0 sm:pr-1">
             <button
               type="button"
               @click="handleGlobalRefresh"
@@ -428,7 +478,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, watch } from "vue";
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { getFlagCode, cleanCountryLabel } from "@/utils/countries";
 import Tooltip from "@/components/common/Tooltip.vue";
@@ -987,7 +1037,42 @@ const isTabActive = (tab) => {
   return currentPath === targetPath || currentPath.startsWith(targetPath);
 };
 
+// ─── Mobile: active tab auto-scroll ───────────────────────────────────────────
+const tabsScrollRef = ref(null);
+
+const scrollActiveTabIntoView = () => {
+  nextTick(() => {
+    const container = tabsScrollRef.value;
+    if (!container || container.scrollWidth <= container.clientWidth) return;
+    const activeEl = container.querySelector('[data-active="true"]');
+    if (!activeEl) return;
+    const cRect = container.getBoundingClientRect();
+    const aRect = activeEl.getBoundingClientRect();
+    const left =
+      aRect.left - cRect.left + container.scrollLeft - (container.clientWidth - aRect.width) / 2;
+    container.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+  });
+};
+
+watch(() => route.path, scrollActiveTabIntoView);
+onMounted(scrollActiveTabIntoView);
+
 // ─── Sidebar ──────────────────────────────────────────────────────────────────
+// On < lg screens the sidebar collapses into a toggleable "Client Information" panel
+const mobileInfoOpen = ref(false);
+
+// Fields whose values are long / chip lists span the full row in the mobile grid
+const WIDE_FIELD_LABELS = new Set([
+  "Email",
+  "Address",
+  "KYC Reject Reason",
+  "Sumsub Applicant ID",
+  "IB Email",
+  "Referral Link",
+]);
+const isWideField = (item) =>
+  !!(item.isAccounts || item.isAccountTypes || WIDE_FIELD_LABELS.has(item.label));
+
 const expanded = ref({
   personal: true,
   info: false,
